@@ -329,8 +329,7 @@ atunci exista o functie unica \(x\in C \left [ a, a + \delta  \right ]\) care sa
 (Se presupune ca M este pozitiv deoarece cazul M = 0 este trivial)
 
 
-\subsection{Demonstratie}
-
+\begin{demonstration}
 Se considera spatiul \(C \left [ a, a + \delta  \right ]\) cu sup-norma obisnuita si metrica d generate de aceasta.  Indica 
 \begin{displaymath}
   Y = \left \{ g\in C \left [ a,a+\delta  \right ] ; \left | g\left ( t \right ) - x_{0}\right | \leq c, \forall t \in \left [ a, a+\delta  \right ]\right \}. 
@@ -349,6 +348,8 @@ Se considera spatiul \(C \left [ a, a + \delta  \right ]\) cu sup-norma obisnuit
 ceea ce dovedeste afirmatia. Prin argumente similar cu cele utilizate in Demonstratia 2 a Teoremei 11.1 deducem ca \(T^{k}\) este o contractie pe \(\left ( Y,d \right )\) pentru \(k\) suficient de mare. Deci \(T\) are un punct fix unic \(x \in Y\) care este Solutia unica a ecuatiei ( 1.1.10) in \(\left [ a, a + \delta  \right ]\). 
 	Un alt rezultat de existent si unicitate se obtine daca k este definit pe un domeniu diferit, \(\tilde{D} = \left \{ \left ( t,s,v \right ) \in \mathbb{R}^{3}; a\leq s\leq t\leq b, \left | v - f\left ( s \right ) \right | \leq c \right \}, c\in \left ( 0, \infty  \right ), \)
 care este o submultime compacta a lui \(\mathbb{R}^{3}\). Urmatorul rezultat face acest lucru precis. 
+	
+\end{demonstration}
 
 \subsection{Teorema}
 
@@ -359,7 +360,7 @@ Presupunem ca \(f \in C \left [ a,b \right ] si k = k\left ( t,s,v \right ) \in 
 
 atunci exista o functie unica \(x \in C \left [ a, a + \delta  \right ]\) care satisfice ecuatia (1.1.10)  in  \(\left [ a, a + \delta  \right ]\) , unde \(\delta = min \left \{ b-a, \frac{c}{M} \right \}\). 
 
-\subsection{Demontratie}
+\begin{demonstration}
 
 Dovada este similara cu cea din Teorema 1.4 de mai sus. Aici domeniul operatorului T este ales convenabil 
 \begin{displaymath}
@@ -367,6 +368,8 @@ Dovada este similara cu cea din Teorema 1.4 de mai sus. Aici domeniul operatorul
 \end{displaymath}
 
 care este bila inchisa in \(\left ( C\left [ a, a+ \delta  \right ], d \right )\) centrata la \(f\) (restransa la \(\left [ a, a+ \delta  \right ]\) de raza \(c\). In mod evident, \(T\) este bine definit pe \(\tilde{Y}\) si \(\tilde{Y}\) inclus in el. De asemenea, se vede cu usurinta ca \(T^{k}\) este o contractie pentru un \(k \in \mathbb{N}\)  suficient de mare. Aceasta completeaza demonstratia (vezi remarca 1).   
+
+\end{demonstration}
 
 \subsection{Comentarii}
 
@@ -409,6 +412,30 @@ rezulta prin diferentierea ecuatiei  (1.2.17) de doua ori faptul ca x ar trebui 
 x\left ( 0 \right )  =  0, x \left ( 1 \right ) = 1.& 
 \end{matrix}\right.
 \end{displaymath}
+
+Pe de alta parte, se vede usor ca de fapt aceasta problema nu are nicio solutie. Prin urmare Ecuatia (1.2.17) nu are solutie. Merita totusi subliniat, faptul ca, in baza ipotezelor de mai sus, Ecuatia (1.2.16) are o solutie unica in \(C\left [ a,b \right ]\) ori de cate ori sup-norma lui \(\left | k \right |\) este sufient de mica, mai precis, daca \(\left ( b-a \right )sup_{\left [ a,b \right ]\times \left [ a,b \right ]}\left | k \right | < 1.\) Acest rezultat urmeaza cu usurinta Principiul Contractiei Banach. De fapt, problema existentei poate fi discutata in spetiul \(L^{2} \left ( a,b ;\mathbb{K} \right ),\) care este n cadru mai larg. Mai exact, sa presupunem \(f\in L^{2}\left ( a,b;\mathbb{K} \right ), k\in L^{2}\left ( Q; \mathbb{K} \right ),\) unde \(Q = \left ( a,b \right )\times \left ( a,b \right ).\) 
+
+Solutia x a Ecuatiei (1.2.16) va fi cautata in \(L_{2}\left ( a,b;\mathbb{K} \right )\) care este un spatiu Hilbert in raport cu produsul scalar obisnuit si norma, 
+\begin{displaymath}
+  \left \langle g_{1}, g_{2} \right \rangle_{L^{2}} = \int_{a}^{b}g_{1}\left ( t \right ) \cdot \overline{{g_{2\left ( t \right )}}}dt, \left \| g \right \|_{L^{2}}^{2} = \left \langle g,g \right \rangle.
+\end{displaymath}
+	Desigur, daca gasim o solutie \(x\in L^{2}\left ( a,b;\mathbb{K} \right )\) a ecuatiei (1.2.16) cu \(f\in C\left ( \left [ a,b \right ];\mathbb{K} \right ), k\in C\left ( \left [ a,b \right ]\times \left [ a,b \right ];\mathbb{K} \right ),\) atunci evident \(x\in C\left ( \left [ a,b \right ];\mathbb{K} \right ).\) Avem urmatorul rezultat. 
+
+\subsection{Teorema }
+
+Daca \(f\in L^{2}\left ( a,b;\mathbb{K} \right ), -\infty < a< b< +\infty , k\in L^{2}\left ( Q; \mathbb{K} \right )\) si \(\int \int _{Q}\left | k\left ( t,s \right ) \right |^{2}dtds< 1,\) unde \(Q = \left ( a,b \right )\times \left ( a,b \right )\) atunci exista o functie unica \(x\in L^{2} \left ( a,b;\mathbb{K} \right ) \)care satisfice ecuatia
+ \begin{displaymath}
+   x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )ds, 
+ \end{displaymath}
+aproape peste tot in \(\left ( a,b  \right )\). 
+
+
+%
+%
+%	18/02/21
+%
+%
+
 
 
 
