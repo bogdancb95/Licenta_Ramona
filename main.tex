@@ -50,11 +50,11 @@ Acest capitol este o introducere la teoria ecuatiilor liniare Volterra si Fresho
 
 Incepem cu ecuatii scalare si liniare Volterra. Exista doua tipuri de astfel de ecuatii care sunt cele mai relevante pentru aplicatii, si anume
 \begin{displaymath}
-  f\left ( t \right ) = \int_{a}^{t}k\left ( t,s \right )x\left ( s \right )ds,    a\leq t\leq b (1.1.1)
+	f\left ( t \right ) = \int_{a}^{t}k\left ( t,s \right )x\left ( s \right )ds,    a\leq t\leq b (1.1.1)
 \end{displaymath}
 si 
 \begin{displaymath}
-  x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x\left ( s \right )ds, a\leq t\leq b (1.1.2)
+	x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x\left ( s \right )ds, a\leq t\leq b (1.1.2)
 \end{displaymath}
 
 unde \(a,b \in \mathbb{R}, a< b, f\in C\left [ a,b \right ]:= C\left ( \left [ a,b \right ];\mathbb{R} \right ) , k\in C\left (\Delta   \right ):= C\left ( \Delta ;\mathbb{R} \right )\) (numit nucleu), cu \(\Delta =\left \{ \left ( t,s \right )\in \mathbb{R}^{2};a\leq s\leq t\leq b \right \};\) si \(x=x\left ( t \right )\) denota functia necunoscuta care se cauta in spatiul \(C\left [ a,b \right ]\). 
@@ -68,220 +68,227 @@ Existetenta si Unicitatea
 In conditiile de mai sus exista o solutie unica \(x\in C\in \left [ a,b \right ]\) la ecuatia (1.1.2).
 Vom prezenta mai jos trei demonstratii diferite.
 
-\subsection{Demonstratie}
-
-Notam \(K = sup_{\left ( t,s \right )\in \Delta }\left | k\left ( t,s \right ) \right |\) care este finite deoarece \(\Delta\) este un subset compact al lui \(\mathbb{R}^{2}\). Presupunem intr-o prima etapa ca 
-\(K\left ( b-a \right ) < 1. (1.1.3)\)
-Se considera \(X = C\left [ a,b \right ]\) echipat cu sup-norma obisnuita \(\left \| g \right \| = sup_{a\leq t\leq b}\left | g\left ( t \right ) \right |\),  si metrica corespunzatoare , \(d\left ( g_{1}, g_{2} \right ) = \left \| g_{1} - g_{2} \right \|\). 
-Definim \(T : X \rightarrow X\) prin 
-\begin{displaymath}
-  \left ( Tg \right )\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )g\left ( s \right )ds, t\in \left [ a,b \right ], g\in X. (1.1.4)
-\end{displaymath}
-	 Este clar din (1.1.4) ca \(T\) mapeaza \(X\). Avem
-\begin{displaymath}
-  \left | \left ( Tg_{1} \right )\left ( t \right ) - \left ( Tg_{2} \right )\left ( t \right )  \right | = \left | \int_{a}^{t}k\left ( t,s \right )\left [ g_{1}\left ( s \right ) - g_{2}\left ( s \right ) \right ]ds \right |\leq
-\end{displaymath}
-\begin{displaymath}
-  \leq \int_{a}^{t}\left | k\left ( t,s \right ) \right |\cdot \left | g_{1}\left ( s \right ) - g_{2}\left ( s \right ) \right |ds \leq K \left ( b-a \right )\left \| g_{1} - g_{2} \right \|
-\end{displaymath}
-
-
-pentru orice \(g_{1}, g_{2} \in X\), si orice  \(t\in \left [ a,b \right ]\). 
-Prin urmare 
-\begin{displaymath}
-  d\left ( Tg_{1} , Tg_{2}\right )\leq K\left ( b-a \right )d\left ( g_{1}, g_{2} \right ), 
-\end{displaymath}
-adica \(T\) este o contractie (conform (1.1.3)).
+\begin{demonstration}
+					
+	Notam \(K = sup_{\left ( t,s \right )\in \Delta }\left | k\left ( t,s \right ) \right |\) care este finite deoarece \(\Delta\) este un subset compact al lui \(\mathbb{R}^{2}\). Presupunem intr-o prima etapa ca 
+	\(K\left ( b-a \right ) < 1. (1.1.3)\)
+	Se considera \(X = C\left [ a,b \right ]\) echipat cu sup-norma obisnuita \(\left \| g \right \| = sup_{a\leq t\leq b}\left | g\left ( t \right ) \right |\),  si metrica corespunzatoare , \(d\left ( g_{1}, g_{2} \right ) = \left \| g_{1} - g_{2} \right \|\). 
+	Definim \(T : X \rightarrow X\) prin 
+	\begin{displaymath}
+		\left ( Tg \right )\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )g\left ( s \right )ds, t\in \left [ a,b \right ], g\in X. (1.1.4)
+	\end{displaymath}
+	Este clar din (1.1.4) ca \(T\) mapeaza \(X\). Avem
+	\begin{displaymath}
+		\left | \left ( Tg_{1} \right )\left ( t \right ) - \left ( Tg_{2} \right )\left ( t \right )  \right | = \left | \int_{a}^{t}k\left ( t,s \right )\left [ g_{1}\left ( s \right ) - g_{2}\left ( s \right ) \right ]ds \right |\leq
+	\end{displaymath}
+	\begin{displaymath}
+		\leq \int_{a}^{t}\left | k\left ( t,s \right ) \right |\cdot \left | g_{1}\left ( s \right ) - g_{2}\left ( s \right ) \right |ds \leq K \left ( b-a \right )\left \| g_{1} - g_{2} \right \|
+	\end{displaymath}
+					
+					
+	pentru orice \(g_{1}, g_{2} \in X\), si orice  \(t\in \left [ a,b \right ]\). 
+	Prin urmare 
+	\begin{displaymath}
+		d\left ( Tg_{1} , Tg_{2}\right )\leq K\left ( b-a \right )d\left ( g_{1}, g_{2} \right ), 
+	\end{displaymath}
+	adica \(T\) este o contractie (conform (1.1.3)).
+					
+\end{demonstration}
 
 
 Conform Principiului Contractiei Banach (cap 2), \(T\) are un punct fix unic \(x \in  X\) care este clar Solutia unica a cuatiei (1.1.2).
-	Daca conditia (1.1.3) nu este indeplinita, atunci consideram o subdiviziunea a intervalului \(\left [ a,b \right ]\), de exemplu 
-\(a = t_{0}< t_{1}< \cdots < t_{N-1}< t_{N} = b,\)
+Daca conditia (1.1.3) nu este indeplinita, atunci consideram o subdiviziunea a intervalului \(\left [ a,b \right ]\), de exemplu 
+\(a = t_{0}< t_{1}< \cdots < t_{N-1}< t_{N} = b,
+\)
 unde \(t_{j} = a + jh\) pentru \(j = 1,2,….,N, h = \frac{\left ( b-a \right )}{N}\), cu \(N\) suficient de mare incat \(Kh < 1\). In special, \(K\left ( t_{1}  - t_{0}\right ) = Kh< 1\), deci de mai sus rezulta ca (1.1.2) are o solutie unica \(x_{1} = x_{1}\left ( t \right ) pe intervalul \left [ t_{0} , t_{1} \right ] = \left [ a, t_{1} \right ]\), adica, 
 \begin{displaymath}
-  x_{1}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x_{1}\left ( s \right )ds, t \in \left [ a, t_{1} \right ]. 
+	x_{1}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x_{1}\left ( s \right )ds, t \in \left [ a, t_{1} \right ]. 
 \end{displaymath}
 
-	Fie ecuatia 
+Fie ecuatia 
 \begin{displaymath}
-  x_{1}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x_{1}\left ( s \right )ds + \int_{t_{1}}^{t_{2}}k\left ( t,s \right )x_{2}\left ( s \right )ds + \int_{t_{2}}^{t}k\left ( t,s \right )x_{3}\left ( s \right )ds,  t\in \left [ t_{1}, t_{2} \right ], 
+	x_{1}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x_{1}\left ( s \right )ds + \int_{t_{1}}^{t_{2}}k\left ( t,s \right )x_{2}\left ( s \right )ds + \int_{t_{2}}^{t}k\left ( t,s \right )x_{3}\left ( s \right )ds,  t\in \left [ t_{1}, t_{2} \right ], 
 \end{displaymath}
 \begin{displaymath}
-  f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x_{1}\left ( s \right )ds =:f_{1}\left ( t \right ) \in C \left [ t_{1} , t_{2} \right ].
+	f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x_{1}\left ( s \right )ds =:f_{1}\left ( t \right ) \in C \left [ t_{1} , t_{2} \right ].
 \end{displaymath}
-	Deoarece \(K\left ( t_{2} - t_{1} \right ) = Kh < 1\), rezulta din argumentul de mai sus ca aceatsa ecuatie are o solutie unica \(x_{2} \in C\left [ t_{1}, t_{2} \right ]\) si, evident, \(x_{2} \left ( t_{1} \right ) = x_{1} \left ( t_{1} \right )\). In mod similar, exista o functie unica \(x_{3} \in C\left [ t_{2} , t_{3} \right ]\) care satisfice urmatoarea ecuatie , pentru orice \(t\in \left [ t_{2} , t_{3} \right ],\)
+Deoarece \(K\left ( t_{2} - t_{1} \right ) = Kh < 1\), rezulta din argumentul de mai sus ca aceatsa ecuatie are o solutie unica \(x_{2} \in C\left [ t_{1}, t_{2} \right ]\) si, evident, \(x_{2} \left ( t_{1} \right ) = x_{1} \left ( t_{1} \right )\). In mod similar, exista o functie unica \(x_{3} \in C\left [ t_{2} , t_{3} \right ]\) care satisfice urmatoarea ecuatie , pentru orice \(t\in \left [ t_{2} , t_{3} \right ],\)
 \begin{displaymath}
-  x_{3}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t_{1}}k\left ( t,s \right )x_{1}\left ( s \right )ds + \int_{t_{1}}^{t_{2}}k\left ( t,s \right )x_{2}\left ( s \right )ds + \int_{t_{2}}^{t}k\left ( t,s \right )x_{3}\left ( s \right )ds, 
+	x_{3}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t_{1}}k\left ( t,s \right )x_{1}\left ( s \right )ds + \int_{t_{1}}^{t_{2}}k\left ( t,s \right )x_{2}\left ( s \right )ds + \int_{t_{2}}^{t}k\left ( t,s \right )x_{3}\left ( s \right )ds, 
 \end{displaymath}
 
 si \(x_{3}\left ( t_{2} \right ) = x_{2}\left ( t_{2} \right )\). Continuand aceasta procedura obtinem o solutie \(x\in C\left [ t_{0}, t_{N} \right ] = C\left [ a,b \right ]\) a ecuatiei (1.1.2) definite de \(x\left ( t \right ) = x_{j}\left ( t \right )\) pentru \(t\in \left [ t_{j-1}, t_{j} \right ], j = 1,2,....,N\). Solutia \(x\) este evident unica. 
 
-\subsection{Demonstratie}
-
-Din nou, luam in considerare operatorul \texttt{T} este definit de ecuatia (1.1.4), unde \(X\) este acelasi ca mai sus. Se vede usor ca
-\begin{displaymath}
-  \left | \left ( Tg_{1} \right )\left ( t \right )  - \left ( Tg_{2} \right )\left ( t \right )\right |\leq K\left \| g_{1}  - g_{2}\right \|\left ( t-a \right ), \forall t\in \left [ a,b \right ], g_{1}, g_{2} \in X. 
-\end{displaymath}
-
+\begin{demonstration}
+					
+					
+	Din nou, luam in considerare operatorul \texttt{T} este definit de ecuatia (1.1.4), unde \(X\) este acelasi ca mai sus. Se vede usor ca
+	\begin{displaymath}
+		\left | \left ( Tg_{1} \right )\left ( t \right )  - \left ( Tg_{2} \right )\left ( t \right )\right |\leq K\left \| g_{1}  - g_{2}\right \|\left ( t-a \right ), \forall t\in \left [ a,b \right ], g_{1}, g_{2} \in X. 
+	\end{displaymath}
+					
 	In consecinta, pentru \(T^{2} = T \circ T\) obtinem 
-\begin{displaymath}
-  \left | \left ( T^{2}g_{1} \right )\left ( t \right )  - \left ( T^{2}g_{2} \right )\left ( t \right )\right |\leq \int_{a}^{t}\left | k\left ( t,s \right ) \right |\cdot \left | \left ( Tg_{1} \right )\left ( s \right ) - \left ( Tg_{2} \right )\left ( s \right ) \right |ds\leq
-\end{displaymath}
+	\begin{displaymath}
+		\left | \left ( T^{2}g_{1} \right )\left ( t \right )  - \left ( T^{2}g_{2} \right )\left ( t \right )\right |\leq \int_{a}^{t}\left | k\left ( t,s \right ) \right |\cdot \left | \left ( Tg_{1} \right )\left ( s \right ) - \left ( Tg_{2} \right )\left ( s \right ) \right |ds\leq
+	\end{displaymath}
+					
+	\begin{displaymath}
+		\leq K^{2}\left \| g_{1} - g_{2} \right \|\int_{a}^{t}\left ( s-a \right )ds = \frac{K^{2}\left ( t-a \right )^{2}}{2!}\left \| g_{1} - g_{2} \right \|. 
+	\end{displaymath}
+					
+\end{demonstration}
 
-\begin{displaymath}
-  \leq K^{2}\left \| g_{1} - g_{2} \right \|\int_{a}^{t}\left ( s-a \right )ds = \frac{K^{2}\left ( t-a \right )^{2}}{2!}\left \| g_{1} - g_{2} \right \|. 
-\end{displaymath}
 
-
-	Se poate demonstra prin inductie faptul ca:
+Se poate demonstra prin inductie faptul ca:
 \begin{displaymath}
-  \left | \left ( T^{k}g_{1} \right ) \left ( t \right ) - \left ( T^{k}g_{2} \right )\left ( t \right )\right |\leq \frac{K^{k}\left ( t-a \right )^{k}}{k!}\left \| g_{1} - g_{2} \right \|\leq \frac{K^{k}\left ( b-a \right )^{k}}{k!}\left \| g_{1}- g_{2} \right \|. 
+	\left | \left ( T^{k}g_{1} \right ) \left ( t \right ) - \left ( T^{k}g_{2} \right )\left ( t \right )\right |\leq \frac{K^{k}\left ( t-a \right )^{k}}{k!}\left \| g_{1} - g_{2} \right \|\leq \frac{K^{k}\left ( b-a \right )^{k}}{k!}\left \| g_{1}- g_{2} \right \|. 
 \end{displaymath}
 
 pentru orice  \(t\in \left [ a,b \right ], g_{1}, g_{2} \in X, k = 1,2,.....\) Acum luam supremul pentru a gasi
 \begin{displaymath}
-  d\left ( T^{k}g_{1} , T^{k}g_{2}\right ) \leq \frac{K^{k}\left ( b - a  \right )^{k}}{k!}\left \| g_{1} - g_{2}\right \|, \forall g_{1}, g_{2} \in X, k = 1,2,... ( 1.1.5)
+	d\left ( T^{k}g_{1} , T^{k}g_{2}\right ) \leq \frac{K^{k}\left ( b - a  \right )^{k}}{k!}\left \| g_{1} - g_{2}\right \|, \forall g_{1}, g_{2} \in X, k = 1,2,... ( 1.1.5)
 \end{displaymath}
 
-	 Cum \(K^{k} \left ( b-a \right )^{\frac{k}{k!}}\rightarrow \infty\) , deoarece \(k\rightarrow \infty, T^{k}\) este o contractie pentru \(k\) suficient de mare ( conform 1.1.5). Conform remarcei 2, \(T\) are un punct fix unic \(x \in X\), care este solutia unica a lui (1.1.2). 
+Cum \(K^{k} \left ( b-a \right )^{\frac{k}{k!}}\rightarrow \infty\) , deoarece \(k\rightarrow \infty, T^{k}\) este o contractie pentru \(k\) suficient de mare ( conform 1.1.5). Conform remarcei 2, \(T\) are un punct fix unic \(x \in X\), care este solutia unica a lui (1.1.2). 
 
-\subsection{Demonstratie}
-
-Fie \(T\) acelasi operator ca mai ianinte, dar luam in considerer o alta norma pe \(X = C\left [ a,b \right ]\), norma \(/bielecki\) , care este definite de \(\left \| g \right \|_{B} = sup e^{-Lt}\left | g\left ( t \right ) \right |\). 
-cu \(L\) o constanta pozitiva astfel incat \(\frac{K}{L} < 1\). Aceasta este intr-adevar o norma pe \(X\), care este echivalenta cu norma obisnuita. Notam cu \(d_{B}\), metrica generata de \(\left \| \cdot \right \|_{B}\). Avem pentru orice \(t\in \left [ a,b  \right ]\) si \(g_{1}, g_{2} \in X\) 
-\begin{displaymath}
-  \left | \left ( Tg_{1} \right )\left ( t \right ) - \left ( Tg_{2} \right )\left ( t \right ) \right | \leq  \int_{a}^{t} \left | k\left ( t,s \right ) \right |e^{Ls}e^{-Ls}\left | g_{1}\left ( s \right ) - g_{2}\left ( s \right ) \right |ds \leq
-\end{displaymath}
-
-\begin{displaymath}
-  \leq K\left \| g_{1} - g_{2} \right \|_{B} \int_{a}^{t}e^{Ls}ds = \frac{K \left \| g_{1} - g_{2} \right \|_{B}}{L}\left ( e^{Lt} - e^{La}\right ),
-\end{displaymath}
-
- 
-astfel incat 
-\begin{displaymath}
-  e^{-Lt}\left | \left ( Tg_{1} \right ) \left ( t \right ) - \left ( Tg_{2} \right )\left ( t \right )\right |\leq \frac{K}{L}\left \| g_{1} - g_{2}\right \|_{B}\left ( 1 - e^{-L\left ( t-a \right )} \right ) \leq  \frac{K}{L}\left \| g_{1}  - g_{2}\right \|_{B}. 
-\end{displaymath}
-
+\begin{demonstration}
+					
+	Fie \(T\) acelasi operator ca mai ianinte, dar luam in considerer o alta norma pe \(X = C\left [ a,b \right ]\), norma \(/bielecki\) , care este definite de \(\left \| g \right \|_{B} = sup e^{-Lt}\left | g\left ( t \right ) \right |\). 
+	cu \(L\) o constanta pozitiva astfel incat \(\frac{K}{L} < 1\). Aceasta este intr-adevar o norma pe \(X\), care este echivalenta cu norma obisnuita. Notam cu \(d_{B}\), metrica generata de \(\left \| \cdot \right \|_{B}\). Avem pentru orice \(t\in \left [ a,b  \right ]\) si \(g_{1}, g_{2} \in X\) 
+	\begin{displaymath}
+		\left | \left ( Tg_{1} \right )\left ( t \right ) - \left ( Tg_{2} \right )\left ( t \right ) \right | \leq  \int_{a}^{t} \left | k\left ( t,s \right ) \right |e^{Ls}e^{-Ls}\left | g_{1}\left ( s \right ) - g_{2}\left ( s \right ) \right |ds \leq
+	\end{displaymath}
+					
+	\begin{displaymath}
+		\leq K\left \| g_{1} - g_{2} \right \|_{B} \int_{a}^{t}e^{Ls}ds = \frac{K \left \| g_{1} - g_{2} \right \|_{B}}{L}\left ( e^{Lt} - e^{La}\right ),
+	\end{displaymath}
+					
+					 
+	astfel incat 
+	\begin{displaymath}
+		e^{-Lt}\left | \left ( Tg_{1} \right ) \left ( t \right ) - \left ( Tg_{2} \right )\left ( t \right )\right |\leq \frac{K}{L}\left \| g_{1} - g_{2}\right \|_{B}\left ( 1 - e^{-L\left ( t-a \right )} \right ) \leq  \frac{K}{L}\left \| g_{1}  - g_{2}\right \|_{B}. 
+	\end{displaymath}
+					
 	Acum luam supremul pentru \(t \in \left [ a,b \right ]\) pentru a gasi
-\(d_{B}\left ( Tg_{1}, Tg_{2} \right ) \leq \frac{K}{L}d_{B}\left ( g_{1} , g_{2}\right ), \forall g_{1}, g_{2}\in X. \)
-	 Cum \(\frac{K}{L} < 1, T\) este o contractie in raport cu \(d_{B}\), prin urmare concluzia teoremei urmeaza din nou Principiul contradictiei Banach. 
+	\(d_{B}\left ( Tg_{1}, Tg_{2} \right ) \leq \frac{K}{L}d_{B}\left ( g_{1} , g_{2}\right ), \forall g_{1}, g_{2}\in X. \)
+	Cum \(\frac{K}{L} < 1, T\) este o contractie in raport cu \(d_{B}\), prin urmare concluzia teoremei urmeaza din nou Principiul contradictiei Banach. 
 	Sa presupunem ca sunt indeplinite conditiile de mai sus pentru \(f\) si \(k\). Pentru \(n\in \mathbb{N}, t\in \left [ a,b \right ]\), vom avea
-\begin{displaymath}
-  x_{n}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x_{n-1}\left ( s \right )ds,
-x_{0}\left ( t \right ) = f\left ( t \right ).
-\end{displaymath}
- 
+	\begin{displaymath}
+		x_{n}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x_{n-1}\left ( s \right )ds,
+		x_{0}\left ( t \right ) = f\left ( t \right ).
+	\end{displaymath}
+					 
 	In mod clar, \(x_{n} \in X = C\left [ a,b \right ]\) pentru orice \(n\). De fapt, secventa de mai sus \(\left ( x_{n} \right )_{n\geq 0}\) poate fi exprimata ca 
-\begin{displaymath}
-  x_{n} = Tx_{n-1}, n\in \mathbb{N}; x_{0} = f,
-\end{displaymath}
-
-unde \(T : X \rightarrow X\) este operatorul definit de (1.1.4). Deci, \(\left (x_{n}  \right )\) este secventa de aproximari successive (associate operatorului T) care a fost folosita in demonstrarea Principiului Contradictiei Banach (Capitolul 2) . Aici luam in considerare o anumita functie de pornire, \(x_{0} = f\). Din demonstratia Principiului Contradictiei Banach stim ca \(\left ( x_{n} \right )\) converge in \(\left ( C\left [ a,b \right ], \left \| \cdot  \right \|_{B} \right )\) catre punctul sau fix unic \(T\), adica \(\left ( x_{n} \right )\) converge uniform in \(\left [ a,b \right ]\) la Solutia unica \(x\) a ecuatiei (1.1.2). Pe de alta parte, avem pentru orice \(t\in \left [ a,b \right ]\)
-\begin{displaymath}
-  x_{1}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )f\left ( s \right )ds,
-\end{displaymath}
-
-\begin{displaymath}
-  x_{2}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )\left [ f\left ( s \right ) + \int_{a}^{s} k\left ( s,  \tau  \right )f\left (\tau  \right )d\tau  \right ]ds
-\end{displaymath}
-
- \begin{displaymath}
-  =  f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )f\left ( s \right )ds + \int_{a}^{t}\int_{a}^{s}k\left ( t,s \right )k\left ( s,\tau  \right )f\left (\tau  \right ) d\tau ds.
-\end{displaymath}
- 
+	\begin{displaymath}
+		x_{n} = Tx_{n-1}, n\in \mathbb{N}; x_{0} = f,
+	\end{displaymath}
+					
+	unde \(T : X \rightarrow X\) este operatorul definit de (1.1.4). Deci, \(\left (x_{n}  \right )\) este secventa de aproximari successive (associate operatorului T) care a fost folosita in demonstrarea Principiului Contradictiei Banach (Capitolul 2) . Aici luam in considerare o anumita functie de pornire, \(x_{0} = f\). Din demonstratia Principiului Contradictiei Banach stim ca \(\left ( x_{n} \right )\) converge in \(\left ( C\left [ a,b \right ], \left \| \cdot  \right \|_{B} \right )\) catre punctul sau fix unic \(T\), adica \(\left ( x_{n} \right )\) converge uniform in \(\left [ a,b \right ]\) la Solutia unica \(x\) a ecuatiei (1.1.2). Pe de alta parte, avem pentru orice \(t\in \left [ a,b \right ]\)
+	\begin{displaymath}
+		x_{1}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )f\left ( s \right )ds,
+	\end{displaymath}
+					
+	\begin{displaymath}
+		x_{2}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )\left [ f\left ( s \right ) + \int_{a}^{s} k\left ( s,  \tau  \right )f\left (\tau  \right )d\tau  \right ]ds
+	\end{displaymath}
+					
+	\begin{displaymath}
+		=  f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )f\left ( s \right )ds + \int_{a}^{t}\int_{a}^{s}k\left ( t,s \right )k\left ( s,\tau  \right )f\left (\tau  \right ) d\tau ds.
+	\end{displaymath}
+					 
 	Putem schimba integrarea pentru a afla ca ultima integral este egala cu 
-\begin{displaymath}
-  \int_{a}^{t}\left [ \int_{\tau }^{t}k\left ( t,\tau  \right )k\left ( s,\tau  \right )ds \right ]f\left (\tau   \right )d\tau, 
-\end{displaymath}
-
-Deci prin simpla reetichetare \(\tau\) si \(s\) avem 
-\begin{displaymath}
-  \int_{a}^{t}\left [ \int_{s}^{t}k\left ( t,\tau  \right )k\left ( \tau ,s \right )d\tau  \right ]f\left ( s \right )ds 
-\end{displaymath}
-
-si au un nucleu nou,  \(k_{2}\). In general, daca notam pentru \(n – 2,3,…\).
-\begin{displaymath}
-  k_{n}\left ( t,s \right ) := \int_{s}^{t}k\left ( t,\tau  \right )k_{n-1}\left ( \tau ,s \right )d\tau,
-\end{displaymath}
-
-\begin{displaymath}
-  k_{1}\left ( t,s \right ) := k\left ( t,s \right ), 
-\end{displaymath}
-
-avem, pentru \(n = 1,2,…..\)
-\begin{displaymath}
-  x_{n}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}\left [ \sum_{j= 1}^{n}k_{j}\left ( t,s \right ) \right ]f\left ( s \right )ds. (1.1.6)
-\end{displaymath}
-
+	\begin{displaymath}
+		\int_{a}^{t}\left [ \int_{\tau }^{t}k\left ( t,\tau  \right )k\left ( s,\tau  \right )ds \right ]f\left (\tau   \right )d\tau, 
+	\end{displaymath}
+					
+	Deci prin simpla reetichetare \(\tau\) si \(s\) avem 
+	\begin{displaymath}
+		\int_{a}^{t}\left [ \int_{s}^{t}k\left ( t,\tau  \right )k\left ( \tau ,s \right )d\tau  \right ]f\left ( s \right )ds 
+	\end{displaymath}
+					
+	si au un nucleu nou,  \(k_{2}\). In general, daca notam pentru \(n – 2,3,…\).
+	\begin{displaymath}
+		k_{n}\left ( t,s \right ) := \int_{s}^{t}k\left ( t,\tau  \right )k_{n-1}\left ( \tau ,s \right )d\tau,
+	\end{displaymath}
+					
+	\begin{displaymath}
+		k_{1}\left ( t,s \right ) := k\left ( t,s \right ), 
+	\end{displaymath}
+					
+	avem, pentru \(n = 1,2,…..\)
+	\begin{displaymath}
+		x_{n}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}\left [ \sum_{j= 1}^{n}k_{j}\left ( t,s \right ) \right ]f\left ( s \right )ds. (1.1.6)
+	\end{displaymath}
+					
 	Deoarece \(k\) este continuu pe multimea compacta \(\Delta\), avem pentru orice \(\left ( t,s \right ) \in \Delta\),
-\begin{displaymath}
-   \left | k_{1}\left ( t,s \right ) \right |\leq K< \infty
-\left | k_{2}\left ( t,s \right ) \right |\leq K^{2}\left ( t-s \right ),
-\left | k_{3}\left ( t,s \right ) \right |\leq K^{3}\int_{s}^{t}\left | \tau - s \right |d\tau  = K^{3}\frac{\left ( t-s \right )^{2}}{2!},
-\end{displaymath}
- 
-\begin{displaymath}
-  \vdots
-\left | k_{n}\left ( t,s \right ) \right |\leq K^{n}\frac{\left ( t-s \right )^{n-1}}{\left ( n-1 \right )!}\leq K^{n}\frac{\left ( b-a \right )^{n-1}}{\left ( n-1 \right )!}. 
-\end{displaymath}
-
+	\begin{displaymath}
+		\left | k_{1}\left ( t,s \right ) \right |\leq K< \infty
+		\left | k_{2}\left ( t,s \right ) \right |\leq K^{2}\left ( t-s \right ),
+		\left | k_{3}\left ( t,s \right ) \right |\leq K^{3}\int_{s}^{t}\left | \tau - s \right |d\tau  = K^{3}\frac{\left ( t-s \right )^{2}}{2!},
+	\end{displaymath}
+					 
+	\begin{displaymath}
+		\vdots
+		\left | k_{n}\left ( t,s \right ) \right |\leq K^{n}\frac{\left ( t-s \right )^{n-1}}{\left ( n-1 \right )!}\leq K^{n}\frac{\left ( b-a \right )^{n-1}}{\left ( n-1 \right )!}. 
+	\end{displaymath}
+					
 	Prin M-testul Weierstrass, seria \(\sum_{n=1}^{\infty }k_{n}\left ( t,s \right )\), converge clar uniform pe \(\Delta\) deoarece 
-\begin{displaymath}
-  \sum_{n=1}^{\infty }\frac{K^{n}\left ( b-a \right )^{n-1}}{\left ( n-1 \right )!}< \infty.
-\end{displaymath}
-
+	\begin{displaymath}
+		\sum_{n=1}^{\infty }\frac{K^{n}\left ( b-a \right )^{n-1}}{\left ( n-1 \right )!}< \infty.
+	\end{displaymath}
+					
 	Inseamna 
-\(R\left ( t,s \right ) = \sum_{n=1}^{\infty }k_{n}\left ( t,s \right ), 
-care este in X\left ( \Delta  \right ).\) Avand \(n\rightarrow \infty\) in (1.1.6) deduce faptul ca 
-\begin{displaymath}
-  x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}R\left ( t,s \right )f\left ( s \right )ds, t\in \left [ a,b \right ]. (1.1.7)
-\end{displaymath}
-
+	\(R\left ( t,s \right ) = \sum_{n=1}^{\infty }k_{n}\left ( t,s \right ), 
+	care este in X\left ( \Delta  \right ).\) Avand \(n\rightarrow \infty\) in (1.1.6) deduce faptul ca 
+	\begin{displaymath}
+		x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}R\left ( t,s \right )f\left ( s \right )ds, t\in \left [ a,b \right ]. (1.1.7)
+	\end{displaymath}
+					
 	Numim \(R\left ( t,s \right )\) nucleul rezolutiv. Acesta depinde de \(k\) dar este independent fata de \(f\), astfel incat odata ce gasim \(R\left ( t,s \right )\), avem Solutia (1.1.2) pentru orice \(f\) ( conform 1.1.7). 
 	Obervam faptul ca 
-\begin{displaymath}
-  \sum_{n=2}^{N+1}k_{n}\left ( t,s \right ) = \int_{s}^{t}k\left ( t,\tau  \right )\sum_{n=2}^{N+1}k_{n-1}\left ( \tau ,s \right )d\tau,
-\end{displaymath}
-
-ceea ce implica 
-\begin{displaymath}
-  -k\left ( t,s \right ) + \sum_{n=1}^{N+1}k_{n}\left ( t,s \right ) = \int_{s}^{t}k\left ( t,\tau  \right )\sum_{n=1}^{N}k_{n}\left ( \tau ,s \right )d\tau .
-\end{displaymath}
-
+	\begin{displaymath}
+		\sum_{n=2}^{N+1}k_{n}\left ( t,s \right ) = \int_{s}^{t}k\left ( t,\tau  \right )\sum_{n=2}^{N+1}k_{n-1}\left ( \tau ,s \right )d\tau,
+	\end{displaymath}
+					
+	ceea ce implica 
+	\begin{displaymath}
+		-k\left ( t,s \right ) + \sum_{n=1}^{N+1}k_{n}\left ( t,s \right ) = \int_{s}^{t}k\left ( t,\tau  \right )\sum_{n=1}^{N}k_{n}\left ( \tau ,s \right )d\tau .
+	\end{displaymath}
+					
 	Luand \(n\rightarrow \infty\) vom constatam ca \(R\) satisface 
-\begin{displaymath}
-  R\left ( t,s \right ) = k\left ( t,s \right ) + \int_{s}^{t}k\left ( t,\tau  \right )R\left ( \tau ,s \right )d\tau , \forall \left ( t,s \right )\in \Delta , 
-\end{displaymath}
-
-care este o ecuatie Volterra similara cu (1.1.2). 
+	\begin{displaymath}
+		R\left ( t,s \right ) = k\left ( t,s \right ) + \int_{s}^{t}k\left ( t,\tau  \right )R\left ( \tau ,s \right )d\tau , \forall \left ( t,s \right )\in \Delta , 
+	\end{displaymath}
+					
+	care este o ecuatie Volterra similara cu (1.1.2). 
 	Acum sa examinam ecuatia (1.1.1). Presuounem ca 
-\begin{displaymath}
-  f\in C^{1}\left [ a,b \right ], si k, \frac{\partial k}{\partial t}\in C\left ( \Delta  \right ), k\left ( t,t \right )\neq 0 pentru orice t \in \left [ a,b \right ]. (H)
-\end{displaymath}
-
+	\begin{displaymath}
+		f\in C^{1}\left [ a,b \right ], si k, \frac{\partial k}{\partial t}\in C\left ( \Delta  \right ), k\left ( t,t \right )\neq 0 pentru orice t \in \left [ a,b \right ]. (H)
+	\end{displaymath}
+					
 	Presupunem de asemenea ca \(f\left ( a \right ) = 0\) care este o conditie necesara pentru (1.1.1) pentru a avea o solutie. Daca (1.1.1) ae o solutie \(x\in C\left [ a,b \right ]\), atunci diferentierea (1.1.1) ne da 
-\begin{displaymath}
-  {f}'\left ( t \right ) = \frac{d}{dt}\int_{a}^{t}k\left ( t,s \right )x\left ( s \right )ds (1.1.8) 
-\end{displaymath}
- 
-\begin{displaymath}
-  = k\left ( t,t \right )x\left ( t \right ) + \int_{a}^{t} k_{t}\left ( t,s \right )x\left ( s \right )ds, t\in \left [ a,b \right ],
-\end{displaymath}
- 
-care este echivalenta cu urmatarea ecuatie integrala de grasul al doilea, 
-\begin{displaymath}
-  x\left ( t \right ) = \frac{{f}'\left ( t \right )}{k\left ( t,t  \right )} + \int_{a}^{t} \left [ \frac{-k_{t}\left ( t,s \right )}{k\left ( t,t \right )} \right ]x\left ( s \right )ds. (1.1.9)
-\end{displaymath}
-
+	\begin{displaymath}
+		{f}'\left ( t \right ) = \frac{d}{dt}\int_{a}^{t}k\left ( t,s \right )x\left ( s \right )ds (1.1.8) 
+	\end{displaymath}
+					 
+	\begin{displaymath}
+		= k\left ( t,t \right )x\left ( t \right ) + \int_{a}^{t} k_{t}\left ( t,s \right )x\left ( s \right )ds, t\in \left [ a,b \right ],
+	\end{displaymath}
+					 
+	care este echivalenta cu urmatarea ecuatie integrala de grasul al doilea, 
+	\begin{displaymath}
+		x\left ( t \right ) = \frac{{f}'\left ( t \right )}{k\left ( t,t  \right )} + \int_{a}^{t} \left [ \frac{-k_{t}\left ( t,s \right )}{k\left ( t,t \right )} \right ]x\left ( s \right )ds. (1.1.9)
+	\end{displaymath}
+					
 	Deci x este, de asemenea, o solutie a ecuatiei (1.1.9). Pe de alta parte, stim din teorema anterioara faptul ca (1.1.9) are o solutie unica \(x\in C\left [ a,b \right ]\). Acest x, este de asemenea, o solutie a ecuatiei (1.1.1). Aceasta urmeaza prin integrarea lui (1.1.8) peste \(\left [ a,t \right ]\) si folosind conditia \(f\left ( a \right ) = 0\). Astfel am demonstrate urmatorul rezultat. 
+\end{demonstration}
 
 \subsection{Teorema}
 
 In conditiile (H) de mai sus, plus \(f\left ( a \right ) = 0\), ecuatia (1.1.1) are o solutie unica \(x \in C\left [ a,b \right ]\).
-	Continuam cu ecuatia neliniara Volterra 
+Continuam cu ecuatia neliniara Volterra 
 \begin{displaymath}
-  x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s,x\left ( s \right ) \right )ds, t\in \left [ a,b \right ], (1.1.10)
+	x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s,x\left ( s \right ) \right )ds, t\in \left [ a,b \right ], (1.1.10)
 \end{displaymath}
 
 si demonstram urmatorul rezultat general. 
@@ -290,158 +297,980 @@ si demonstram urmatorul rezultat general.
 
 Presupunem ca \(f\in C\left [ a,b \right ]\), \(k\in C\left ( D \right )\), unde 
 \begin{displaymath}
-  D:= \Delta \times \mathbb{R} = \left \{ \left ( t,s,v \right )\in \mathbb{R}^{3}; a\leq s\leq t\leq b, v\in \mathbb{R}\right \}, 
+	D:= \Delta \times \mathbb{R} = \left \{ \left ( t,s,v \right )\in \mathbb{R}^{3}; a\leq s\leq t\leq b, v\in \mathbb{R}\right \}, 
 \end{displaymath}
 si exista un \(K> 0\) astfel incat
 \begin{displaymath}
-  \left | k\left ( t,s,v \right )  - k\left ( t,s,w \right )\right |\leq K\left | v-w \right |\forall a\leq s\leq t\leq b; v,w\in \mathbb{R}.(1.1.11)
+	\left | k\left ( t,s,v \right )  - k\left ( t,s,w \right )\right |\leq K\left | v-w \right |\forall a\leq s\leq t\leq b; v,w\in \mathbb{R}.(1.1.11)
 \end{displaymath}
 
 Atunci exista o functie unica \(x\in C\left [ a,b \right ]\) care satisfice ecuatia (1.1.10) in \(\left [ a,b \right ]\).
 
-\subsection{Demonstratie}
-
-Fie \(X = C \left [ a,b \right ]\) echipat cu norma Bielecki si definim \(T : X \rightarrow X\) prin 
-\begin{displaymath}
-  \left ( Tg \right )\left ( t \right ) = f\left ( t \right ) + \int_{0}^{t}k\left ( t,s,g\left ( s \right ) \right )ds, \forall t \left [ a,b \right ], g\in X. 
-\end{displaymath}
-
+\begin{demonstration}
+					
+	Fie \(X = C \left [ a,b \right ]\) echipat cu norma Bielecki si definim \(T : X \rightarrow X\) prin 
+	\begin{displaymath}
+		\left ( Tg \right )\left ( t \right ) = f\left ( t \right ) + \int_{0}^{t}k\left ( t,s,g\left ( s \right ) \right )ds, \forall t \left [ a,b \right ], g\in X. 
+	\end{displaymath}
+					
 	Concluzia este urmata de Principiului Contradictiei Banach in mod similar, ca in Demonstartia 3, a teoremei 1.
 	Teorema 1.3 ofera o solutie globala in sensul ca intervalul de existenta este intregul interval \(\left [ a,b \right ]\). In mod evident, aceasta este o generalizare a Teoremei 1.1. Intr-adevar, pentru a obtine Teorema 1.1 este suficient sa presupunem ca k este linear in a treia variabila, adica \(k:= k\left ( t,s \right )v, a\leq s\leq t\leq b, v\in \mathbb{R}\), cu \(k \in C\left ( \Delta  \right )\) astfel incat conditia Lipschitz (1.1.11) este satisfacuta automat. 
 	Acum sa examinam un caz in care Solutia rezultata este doar una locala, adica domeniul sau poate sa nu fie intregul interval \(\left [ a,b \right ]\). 
+						
+\end{demonstration}
 
 \subsection{Teorema}
 
 Sa presupunem ca \(f\in C\left [ a,b \right ] , k = k\left ( t,s,v \right ) \in C\left ( D \right )\), unde \(D := \Delta \times \left [ x_{0} - c, x_{0} + c \right ] = \left \{ \left ( t,s,v \right ) \in \mathbb{R}^{3} ; a \leq s\leq t\leq b, \left | v - x_{0} \right |\leq c\right \}\), cu \(x_{0} \in \mathbb{R}\) si \(c\in \left ( 0, \infty  \right )\). Daca in plus, exista \(K > 0\) astfel incat
 \begin{displaymath}
-  \left | k\left ( t,s,v \right ) - k\left ( t,s,w \right )\right | \leq K \left | v - w \right | \forall \left ( t,s,v \right ), \left ( t,s,w \right ) \in D, (1.1.12)
+	\left | k\left ( t,s,v \right ) - k\left ( t,s,w \right )\right | \leq K \left | v - w \right | \forall \left ( t,s,v \right ), \left ( t,s,w \right ) \in D, (1.1.12)
 \end{displaymath}
 
 iar pentru unii \(d \in \left [ 0,c \right )\) 
-\begin{displaymath}
-  \left | f\left ( t \right ) - x_{0}\right | \leq d, \forall t \in \left [ a,b \right ], (1.1.13)
-\end{displaymath}
-
-atunci exista o functie unica \(x\in C \left [ a, a + \delta  \right ]\) care satisfice ecuatia (1.1.10) in  \(\left [ a, a + \delta  \right ]\), unde 
-\begin{displaymath}
-  \delta  = min \left \{ b-a, \frac{\left ( c-d \right )}{M} \right \}, M = sup \left \{ \left | k\left ( t,s,v \right ) \right |;\left ( t,s,v \right ) \in D \right \}.
-\end{displaymath}
-(Se presupune ca M este pozitiv deoarece cazul M = 0 este trivial)
-
-
-\begin{demonstration}
-Se considera spatiul \(C \left [ a, a + \delta  \right ]\) cu sup-norma obisnuita si metrica d generate de aceasta.  Indica 
-\begin{displaymath}
-  Y = \left \{ g\in C \left [ a,a+\delta  \right ] ; \left | g\left ( t \right ) - x_{0}\right | \leq c, \forall t \in \left [ a, a+\delta  \right ]\right \}. 
-\end{displaymath}
-
-	In mod clar \(\left ( Y,d \right )\) este un spatiu metric complet ( deoarece \(/y\) este o submultime inchisa a \(\left ( C \left [ a, a + \delta  \right ] , d \right )\). Ca de obicei, definim un operator \(T\) prin
- \begin{displaymath}
-  \left ( Tg \right )\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s,g\left ( s \right ) \right )ds, t\in \left [ a, a + \delta  \right ], g\in Y. 
-\end{displaymath}
-
-	Sa aratam ca \(Y\) o sa fie inclus in \(T\). Intr-adevar, pentru toate \(g\in Y si t\in \left [ a, a+ \delta  \right ]\) vom avea (vezi (1.1.13)). 
-\begin{displaymath}
-  \left | \left ( Tg \right )\left ( t \right ) - x_{0}\right | \leq \left | f\left ( t \right )-x_{0} \right | + \int_{a}^{t}\left | k\left ( t,s,g\left ( s \right ) \right ) \right |ds \leq d + M\left ( t-a \right ) \leq  d+ M\delta  \leq  c,
-\end{displaymath}
- 
-ceea ce dovedeste afirmatia. Prin argumente similar cu cele utilizate in Demonstratia 2 a Teoremei 11.1 deducem ca \(T^{k}\) este o contractie pe \(\left ( Y,d \right )\) pentru \(k\) suficient de mare. Deci \(T\) are un punct fix unic \(x \in Y\) care este Solutia unica a ecuatiei ( 1.1.10) in \(\left [ a, a + \delta  \right ]\). 
-	Un alt rezultat de existent si unicitate se obtine daca k este definit pe un domeniu diferit, \(\tilde{D} = \left \{ \left ( t,s,v \right ) \in \mathbb{R}^{3}; a\leq s\leq t\leq b, \left | v - f\left ( s \right ) \right | \leq c \right \}, c\in \left ( 0, \infty  \right ), \)
-care este o submultime compacta a lui \(\mathbb{R}^{3}\). Urmatorul rezultat face acest lucru precis. 
-	
-\end{demonstration}
-
-\subsection{Teorema}
-
-Presupunem ca \(f \in C \left [ a,b \right ] si k = k\left ( t,s,v \right ) \in C\left ( \tilde{D} \right )\), cu \(M = sup _{\tilde{D}}\left | k \right |> 0\). Daca, in plus, exista un \(K > 0\) astfel incat 
-\begin{displaymath}
-  \left | k\left ( t,s,v \right ) - k \left ( t,s,w \right ) \right | \leq K \left | v-w \right |, \forall \left ( t,s,v \right ) \in \tilde{D}, (1.1.14)
-\end{displaymath}
-
-atunci exista o functie unica \(x \in C \left [ a, a + \delta  \right ]\) care satisfice ecuatia (1.1.10)  in  \(\left [ a, a + \delta  \right ]\) , unde \(\delta = min \left \{ b-a, \frac{c}{M} \right \}\). 
-
-\begin{demonstration}
-
-Dovada este similara cu cea din Teorema 1.4 de mai sus. Aici domeniul operatorului T este ales convenabil 
-\begin{displaymath}
-  \tilde{Y} = \left \{ g \in C \left [ a, a+ \delta  \right ] ; \left | g\left ( t \right ) - f\left ( t \right ) \right | \leq c, \forall t \in \left [ a, a+ \delta  \right ] \right \}, 
-\end{displaymath}
-
-care este bila inchisa in \(\left ( C\left [ a, a+ \delta  \right ], d \right )\) centrata la \(f\) (restransa la \(\left [ a, a+ \delta  \right ]\) de raza \(c\). In mod evident, \(T\) este bine definit pe \(\tilde{Y}\) si \(\tilde{Y}\) inclus in el. De asemenea, se vede cu usurinta ca \(T^{k}\) este o contractie pentru un \(k \in \mathbb{N}\)  suficient de mare. Aceasta completeaza demonstratia (vezi remarca 1).   
-
-\end{demonstration}
-
-\subsection{Comentarii}
-
-\begin{enumerate}[1.]
-\item Daca in Teorema 1.4 presupunem \(d = 0 ( adica, f \equiv x_{0} )\) si \(k\) este independent de \(t\), adica \(k\left ( t,s,v \right ) = h \left ( s,v \right )\), atunci obtinem din nou o existeta binecunoscut si rezultat de unicitate pentru problema Cauchy 
-\begin{displaymath}
-  {x}'\left ( t \right ) = h\left ( t,x\left ( t \right ) \right ), x\left ( a \right ) = x_{0}.
-\end{displaymath}
-Vezi partea introductive a Sect 2.5 . Acelasi rezultat poate sa fie derivate din Teorema 1.5. 
-\item Daca toate conditiile Teoremei 1.4 sunt indeplinite, cu exceptia conditiei Lipschitz (1.1.12) , atunci existent locala ramane valabila, dar fara unicitate. Intr-adevar, \(k = k\left ( t,s,v \right )\) poate fi aproximat uniform pe \(D\) printr-o succesiune de functii netede (deci Lipschitzian, chiar si in toate variabilele), sa spunem \(\left ( k_{n} \right )_{n\in \mathbb{N}}\). Pentru a obtine o astfel de secventa putem folosi, de exemplu, molificarea lui Friedrichs cu \(\varepsilon = \frac{1}{n}\).(Vezi Cap 5)  De fapt, printr-un rezultat classic, \(k = k\left ( t,s,v \right )\) poate fi chiar aproximat prin olinoame in \(t,s,v\). conform Teoremei 1.4, pentru fiecare \(n \in \mathbb{N}\) exista o funtie unica \(x_{n}\) care satisfice ecuatia
-\begin{displaymath}
-  x_{n}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k_{n}\left ( t,s,x_{n}\left ( s \right ) \right )ds, \forall t\in \left [ a,a+\delta  \right ], (1.1.15)
-\end{displaymath}
-
-unde \(\delta = min\left \{ b-a, \frac{\left ( c-d \right )}{\hat{M}} \right \}\), cu \(\hat{M}\) fiind cea mai mica limita superioara a \(\left \{ sup_{D} \left | k_{n} \right |\right \}_{n\in \mathbb{N}}\), de exemplu, \(\hat{M} = sup_{\left ( t,s,v \right )\in D, n \in \mathbb{N}}\left | k_{n}\left ( t,s,v \right ) \right |\), ( care este finit deoarece \(k_{n}\rightarrow k\) uniform in D). Desigur, \(\hat{\delta }\) este mai mic decat \({\delta }\) dat de Teorema 1.4. Se vede usor ca \(\left ( x_{n} \right )\)  indeplineste conditiile Criteriul Arzelà-Ascoli (Vezi Capitolul 2), deci exista o subsecventa \(\left ( x_{n_{j}} \right )_{j\in \mathbb{N}}\) care converge uniform pe \(\left [ a, a+ \delta  \right ]\) la o functie \(x \in C \left [ a, a+ \delta  \right ]\). Luand \(j\rightarrow \infty\) in (1.1.15) cu \(n:= n_{j}\), deduce ca \(x\) satisfice Ecuatia (1.1.10) in \(\left [ a,a+ \delta  \right ]\). Remarci similar sunt valabile pentru Teorma 1.5. 
-\item Problemele calitative, precum continuitatea solutiilor locale, existent pe semiaxa \(\left [ a, \infty  \right ]\) , comportamentul solutiilor la sfarsitul intervalelor de existent, sunt evitate aici. 
-\item Toate observatiile de mai sus se aplica ecuatiilor Volterra liniare si neliniare din \(\mathbb{R}^{k}, k\in \mathbb{N}, k\geq 2\), cu usoare modificari evidente. 
-\end{enumerate}
-
-\section{Ecuatii Fredholm}
-In cele ce urmeaza \(\mathbb{K}\) este fie \(\mathbb{R}\), fie \(\mathbb{C}\). Consideram in \(\mathbb{K}\) ecuatia integrala \(x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )ds, t\in \left [ a,b \right ], (1.2.16)\)
-unde \(a,b \in \mathbb{R}, a< b, f\in C\left ( \left [ a,b \right ]; \mathbb{K}\right )\) si \(k\in C\left ( \left [ a,b \right ] \times \left [ a,b \right ]; \mathbb{K}\right ).\) Aici preferam \(\mathbb{K}\) in loc de \(\mathbb{R}\), deoarece unele aspect specific sunt mai bine descries in acest cadru. Ecuatia (1.2.16) ste cunoscuta ca ecuatia Fredholm (uneori este numita a doua ecuatie a lui Fredholm). Ea implica un interval fix de integrare si este fundamental diferita de Ecuatia (1.1.2).  O prima remarca care confirma aceasta afirmaie este ca , in timp ce ecuatia Volterra corespunzatoare (a doua ecuatie) are intotdeauna o solutie (unica, continua) in \(\left [ a,b \right ]\), Ecuatia (1.2.16) poate sa nu aibao solutie in unele cazuri. De exemplu, presupunand ca exista o solutie \(x \in C\left [ 0,1 \right ] := C\left ( \left [ 0,1 \right ]; \mathbb{R} \right )\) a ecuatiei ( 9 pg 41) 
-\begin{displaymath}
-  x\left ( t \right ) = t + \int_{0}^{1} k\left ( t,s \right )x\left ( s \right )ds, t\in \left [ 0,1 \right ], (1.2.17)
-\end{displaymath}
-
-unde
-\begin{displaymath}
-  \left\{\begin{matrix}
-\pi ^{2} \left ( s \right )\left ( 1-t \right ) , & s\leq t\\ 
- & \\ \pi ^{2}t\left ( 1-s \right ),  & t\leq s
-\end{matrix}\right.
-\end{displaymath}
-
-rezulta prin diferentierea ecuatiei  (1.2.17) de doua ori faptul ca x ar trebui sa satisfaca problema 
-
-\begin{displaymath}
-  \left\{\begin{matrix}
-{x}'' \left ( t \right ) + \pi ^{2}x\left ( t \right )  = 0, & t \in \left [ 0,1 \right ] \\ 
-x\left ( 0 \right )  =  0, x \left ( 1 \right ) = 1.& 
-\end{matrix}\right.
-\end{displaymath}
-
-Pe de alta parte, se vede usor ca de fapt aceasta problema nu are nicio solutie. Prin urmare Ecuatia (1.2.17) nu are solutie. Merita totusi subliniat, faptul ca, in baza ipotezelor de mai sus, Ecuatia (1.2.16) are o solutie unica in \(C\left [ a,b \right ]\) ori de cate ori sup-norma lui \(\left | k \right |\) este sufient de mica, mai precis, daca \(\left ( b-a \right )sup_{\left [ a,b \right ]\times \left [ a,b \right ]}\left | k \right | < 1.\) Acest rezultat urmeaza cu usurinta Principiul Contractiei Banach. De fapt, problema existentei poate fi discutata in spetiul \(L^{2} \left ( a,b ;\mathbb{K} \right ),\) care este n cadru mai larg. Mai exact, sa presupunem \(f\in L^{2}\left ( a,b;\mathbb{K} \right ), k\in L^{2}\left ( Q; \mathbb{K} \right ),\) unde \(Q = \left ( a,b \right )\times \left ( a,b \right ).\) 
-
-Solutia x a Ecuatiei (1.2.16) va fi cautata in \(L_{2}\left ( a,b;\mathbb{K} \right )\) care este un spatiu Hilbert in raport cu produsul scalar obisnuit si norma, 
-\begin{displaymath}
-  \left \langle g_{1}, g_{2} \right \rangle_{L^{2}} = \int_{a}^{b}g_{1}\left ( t \right ) \cdot \overline{{g_{2\left ( t \right )}}}dt, \left \| g \right \|_{L^{2}}^{2} = \left \langle g,g \right \rangle.
-\end{displaymath}
+	\begin{displaymath}
+		\left | f\left ( t \right ) - x_{0}\right | \leq d, \forall t \in \left [ a,b \right ], (1.1.13)
+	\end{displaymath}
+					
+	atunci exista o functie unica \(x\in C \left [ a, a + \delta  \right ]\) care satisfice ecuatia (1.1.10) in  \(\left [ a, a + \delta  \right ]\), unde 
+	\begin{displaymath}
+		\delta  = min \left \{ b-a, \frac{\left ( c-d \right )}{M} \right \}, M = sup \left \{ \left | k\left ( t,s,v \right ) \right |;\left ( t,s,v \right ) \in D \right \}.
+	\end{displaymath}
+	(Se presupune ca M este pozitiv deoarece cazul M = 0 este trivial)
+					
+					
+	\begin{demonstration}
+		Se considera spatiul \(C \left [ a, a + \delta  \right ]\) cu sup-norma obisnuita si metrica d generate de aceasta.  Indica 
+		\begin{displaymath}
+			Y = \left \{ g\in C \left [ a,a+\delta  \right ] ; \left | g\left ( t \right ) - x_{0}\right | \leq c, \forall t \in \left [ a, a+\delta  \right ]\right \}. 
+		\end{displaymath}
+										
+		In mod clar \(\left ( Y,d \right )\) este un spatiu metric complet ( deoarece \(/y\) este o submultime inchisa a \(\left ( C \left [ a, a + \delta  \right ] , d \right )\). Ca de obicei, definim un operator \(T\) prin
+		\begin{displaymath}
+			\left ( Tg \right )\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s,g\left ( s \right ) \right )ds, t\in \left [ a, a + \delta  \right ], g\in Y. 
+		\end{displaymath}
+										
+		Sa aratam ca \(Y\) o sa fie inclus in \(T\). Intr-adevar, pentru toate \(g\in Y si t\in \left [ a, a+ \delta  \right ]\) vom avea (vezi (1.1.13)). 
+		\begin{displaymath}
+			\left | \left ( Tg \right )\left ( t \right ) - x_{0}\right | \leq \left | f\left ( t \right )-x_{0} \right | + \int_{a}^{t}\left | k\left ( t,s,g\left ( s \right ) \right ) \right |ds \leq d + M\left ( t-a \right ) \leq  d+ M\delta  \leq  c,
+		\end{displaymath}
+										 
+		ceea ce dovedeste afirmatia. Prin argumente similar cu cele utilizate in Demonstratia 2 a Teoremei 11.1 deducem ca \(T^{k}\) este o contractie pe \(\left ( Y,d \right )\) pentru \(k\) suficient de mare. Deci \(T\) are un punct fix unic \(x \in Y\) care este Solutia unica a ecuatiei ( 1.1.10) in \(\left [ a, a + \delta  \right ]\). 
+		Un alt rezultat de existent si unicitate se obtine daca k este definit pe un domeniu diferit, \(\tilde{D} = \left \{ \left ( t,s,v \right ) \in \mathbb{R}^{3}; a\leq s\leq t\leq b, \left | v - f\left ( s \right ) \right | \leq c \right \}, c\in \left ( 0, \infty  \right ), \)
+		care este o submultime compacta a lui \(\mathbb{R}^{3}\). Urmatorul rezultat face acest lucru precis. 
+											
+	\end{demonstration}
+					
+	\subsection{Teorema}
+					
+	Presupunem ca \(f \in C \left [ a,b \right ] si k = k\left ( t,s,v \right ) \in C\left ( \tilde{D} \right )\), cu \(M = sup _{\tilde{D}}\left | k \right |> 0\). Daca, in plus, exista un \(K > 0\) astfel incat 
+	\begin{displaymath}
+		\left | k\left ( t,s,v \right ) - k \left ( t,s,w \right ) \right | \leq K \left | v-w \right |, \forall \left ( t,s,v \right ) \in \tilde{D}, (1.1.14)
+	\end{displaymath}
+					
+	atunci exista o functie unica \(x \in C \left [ a, a + \delta  \right ]\) care satisfice ecuatia (1.1.10)  in  \(\left [ a, a + \delta  \right ]\) , unde \(\delta = min \left \{ b-a, \frac{c}{M} \right \}\). 
+					
+	\begin{demonstration}
+										
+		Dovada este similara cu cea din Teorema 1.4 de mai sus. Aici domeniul operatorului T este ales convenabil 
+		\begin{displaymath}
+			\tilde{Y} = \left \{ g \in C \left [ a, a+ \delta  \right ] ; \left | g\left ( t \right ) - f\left ( t \right ) \right | \leq c, \forall t \in \left [ a, a+ \delta  \right ] \right \}, 
+		\end{displaymath}
+										
+		care este bila inchisa in \(\left ( C\left [ a, a+ \delta  \right ], d \right )\) centrata la \(f\) (restransa la \(\left [ a, a+ \delta  \right ]\) de raza \(c\). In mod evident, \(T\) este bine definit pe \(\tilde{Y}\) si \(\tilde{Y}\) inclus in el. De asemenea, se vede cu usurinta ca \(T^{k}\) este o contractie pentru un \(k \in \mathbb{N}\)  suficient de mare. Aceasta completeaza demonstratia (vezi remarca 1).   
+										
+	\end{demonstration}
+					
+	\subsection{Comentarii}
+					
+	\begin{enumerate}[1.]
+		\item Daca in Teorema 1.4 presupunem \(d = 0 ( adica, f \equiv x_{0} )\) si \(k\) este independent de \(t\), adica \(k\left ( t,s,v \right ) = h \left ( s,v \right )\), atunci obtinem din nou o existeta binecunoscut si rezultat de unicitate pentru problema Cauchy 
+		      \begin{displaymath}
+		      	{x}'\left ( t \right ) = h\left ( t,x\left ( t \right ) \right ), x\left ( a \right ) = x_{0}.
+		      \end{displaymath}
+		      Vezi partea introductive a Sect 2.5 . Acelasi rezultat poate sa fie derivate din Teorema 1.5. 
+		\item Daca toate conditiile Teoremei 1.4 sunt indeplinite, cu exceptia conditiei Lipschitz (1.1.12) , atunci existent locala ramane valabila, dar fara unicitate. Intr-adevar, \(k = k\left ( t,s,v \right )\) poate fi aproximat uniform pe \(D\) printr-o succesiune de functii netede (deci Lipschitzian, chiar si in toate variabilele), sa spunem \(\left ( k_{n} \right )_{n\in \mathbb{N}}\). Pentru a obtine o astfel de secventa putem folosi, de exemplu, molificarea lui Friedrichs cu \(\varepsilon = \frac{1}{n}\).(Vezi Cap 5)  De fapt, printr-un rezultat classic, \(k = k\left ( t,s,v \right )\) poate fi chiar aproximat prin olinoame in \(t,s,v\). conform Teoremei 1.4, pentru fiecare \(n \in \mathbb{N}\) exista o funtie unica \(x_{n}\) care satisfice ecuatia
+		      \begin{displaymath}
+		      	x_{n}\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k_{n}\left ( t,s,x_{n}\left ( s \right ) \right )ds, \forall t\in \left [ a,a+\delta  \right ], (1.1.15)
+		      \end{displaymath}
+		      		      		      		      		      
+		      unde \(\delta = min\left \{ b-a, \frac{\left ( c-d \right )}{\hat{M}} \right \}\), cu \(\hat{M}\) fiind cea mai mica limita superioara a \(\left \{ sup_{D} \left | k_{n} \right |\right \}_{n\in \mathbb{N}}\), de exemplu, \(\hat{M} = sup_{\left ( t,s,v \right )\in D, n \in \mathbb{N}}\left | k_{n}\left ( t,s,v \right ) \right |\), ( care este finit deoarece \(k_{n}\rightarrow k\) uniform in D). Desigur, \(\hat{\delta }\) este mai mic decat \({\delta }\) dat de Teorema 1.4. Se vede usor ca \(\left ( x_{n} \right )\)  indeplineste conditiile Criteriul Arzelà-Ascoli (Vezi Capitolul 2), deci exista o subsecventa \(\left ( x_{n_{j}} \right )_{j\in \mathbb{N}}\) care converge uniform pe \(\left [ a, a+ \delta  \right ]\) la o functie \(x \in C \left [ a, a+ \delta  \right ]\). Luand \(j\rightarrow \infty\) in (1.1.15) cu \(n:= n_{j}\), deduce ca \(x\) satisfice Ecuatia (1.1.10) in \(\left [ a,a+ \delta  \right ]\). Remarci similar sunt valabile pentru Teorma 1.5. 
+		\item Problemele calitative, precum continuitatea solutiilor locale, existent pe semiaxa \(\left [ a, \infty  \right ]\) , comportamentul solutiilor la sfarsitul intervalelor de existent, sunt evitate aici. 
+		\item Toate observatiile de mai sus se aplica ecuatiilor Volterra liniare si neliniare din \(\mathbb{R}^{k}, k\in \mathbb{N}, k\geq 2\), cu usoare modificari evidente. 
+	\end{enumerate}
+					
+	\section{Ecuatii Fredholm}
+					
+	In cele ce urmeaza \(\mathbb{K}\) este fie \(\mathbb{R}\), fie \(\mathbb{C}\). Consideram in \(\mathbb{K}\) ecuatia integrala \(x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )ds, t\in \left [ a,b \right ], (1.2.16)\)
+	unde \(a,b \in \mathbb{R}, a< b, f\in C\left ( \left [ a,b \right ]; \mathbb{K}\right )\) si \(k\in C\left ( \left [ a,b \right ] \times \left [ a,b \right ]; \mathbb{K}\right ).\) Aici preferam \(\mathbb{K}\) in loc de \(\mathbb{R}\), deoarece unele aspect specific sunt mai bine descries in acest cadru. Ecuatia (1.2.16) ste cunoscuta ca ecuatia Fredholm (uneori este numita a doua ecuatie a lui Fredholm). Ea implica un interval fix de integrare si este fundamental diferita de Ecuatia (1.1.2).  O prima remarca care confirma aceasta afirmaie este ca , in timp ce ecuatia Volterra corespunzatoare (a doua ecuatie) are intotdeauna o solutie (unica, continua) in \(\left [ a,b \right ]\), Ecuatia (1.2.16) poate sa nu aibao solutie in unele cazuri. De exemplu, presupunand ca exista o solutie \(x \in C\left [ 0,1 \right ] := C\left ( \left [ 0,1 \right ]; \mathbb{R} \right )\) a ecuatiei ( 9 pg 41) 
+	\begin{displaymath}
+		x\left ( t \right ) = t + \int_{0}^{1} k\left ( t,s \right )x\left ( s \right )ds, t\in \left [ 0,1 \right ], (1.2.17)
+	\end{displaymath}
+					
+	unde
+	\begin{displaymath}
+		\left\{\begin{matrix}
+		\pi ^{2} \left ( s \right )\left ( 1-t \right ) , & s\leq t\\ 
+		& \\ \pi ^{2}t\left ( 1-s \right ),  & t\leq s
+		\end{matrix}\right.
+	\end{displaymath}
+					
+	rezulta prin diferentierea ecuatiei  (1.2.17) de doua ori faptul ca x ar trebui sa satisfaca problema 
+					
+	\begin{displaymath}
+		\left\{\begin{matrix}
+		{x}'' \left ( t \right ) + \pi ^{2}x\left ( t \right )  = 0, & t \in \left [ 0,1 \right ] \\ 
+		x\left ( 0 \right )  =  0, x \left ( 1 \right ) = 1.& 
+		\end{matrix}\right.
+	\end{displaymath}
+					
+	Pe de alta parte, se vede usor ca de fapt aceasta problema nu are nicio solutie. Prin urmare Ecuatia (1.2.17) nu are solutie. Merita totusi subliniat, faptul ca, in baza ipotezelor de mai sus, Ecuatia (1.2.16) are o solutie unica in \(C\left [ a,b \right ]\) ori de cate ori sup-norma lui \(\left | k \right |\) este sufient de mica, mai precis, daca \(\left ( b-a \right )sup_{\left [ a,b \right ]\times \left [ a,b \right ]}\left | k \right | < 1.\) Acest rezultat urmeaza cu usurinta Principiul Contractiei Banach. De fapt, problema existentei poate fi discutata in spetiul \(L^{2} \left ( a,b ;\mathbb{K} \right ),\) care este n cadru mai larg. Mai exact, sa presupunem \(f\in L^{2}\left ( a,b;\mathbb{K} \right ), k\in L^{2}\left ( Q; \mathbb{K} \right ),\) unde \(Q = \left ( a,b \right )\times \left ( a,b \right ).\) 
+					
+	Solutia x a Ecuatiei (1.2.16) va fi cautata in \(L_{2}\left ( a,b;\mathbb{K} \right )\) care este un spatiu Hilbert in raport cu produsul scalar obisnuit si norma, 
+	\begin{displaymath}
+		\left \langle g_{1}, g_{2} \right \rangle_{L^{2}} = \int_{a}^{b}g_{1}\left ( t \right ) \cdot \overline{{g_{2\left ( t \right )}}}dt, \left \| g \right \|_{L^{2}}^{2} = \left \langle g,g \right \rangle.
+	\end{displaymath}
 	Desigur, daca gasim o solutie \(x\in L^{2}\left ( a,b;\mathbb{K} \right )\) a ecuatiei (1.2.16) cu \(f\in C\left ( \left [ a,b \right ];\mathbb{K} \right ), k\in C\left ( \left [ a,b \right ]\times \left [ a,b \right ];\mathbb{K} \right ),\) atunci evident \(x\in C\left ( \left [ a,b \right ];\mathbb{K} \right ).\) Avem urmatorul rezultat. 
-
-\subsection{Teorema }
-
-Daca \(f\in L^{2}\left ( a,b;\mathbb{K} \right ), -\infty < a< b< +\infty , k\in L^{2}\left ( Q; \mathbb{K} \right )\) si \(\int \int _{Q}\left | k\left ( t,s \right ) \right |^{2}dtds< 1,\) unde \(Q = \left ( a,b \right )\times \left ( a,b \right )\) atunci exista o functie unica \(x\in L^{2} \left ( a,b;\mathbb{K} \right ) \)care satisfice ecuatia
- \begin{displaymath}
-   x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )ds, 
- \end{displaymath}
-aproape peste tot in \(\left ( a,b  \right )\). 
-
-
-%
-%
-%	18/02/21
-%
-%
-
-
-
-
-
-\bibliographystyle{unsrt}
-\setlength{\baselineskip}{\normalbaselineskip}
-\setlength{\parskip}{0pt}
-\bibliography{refs}
+					
+	\subsection{Teorema }
+					
+	Daca \(f\in L^{2}\left ( a,b;\mathbb{K} \right ), -\infty < a< b< +\infty , k\in L^{2}\left ( Q; \mathbb{K} \right )\) si \(\int \int _{Q}\left | k\left ( t,s \right ) \right |^{2}dtds< 1,\) unde \(Q = \left ( a,b \right )\times \left ( a,b \right )\) atunci exista o functie unica \(x\in L^{2} \left ( a,b;\mathbb{K} \right ) \)care satisfice ecuatia
+	\begin{displaymath}
+		x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )ds, 
+	\end{displaymath}
+	aproape peste tot in \(\left ( a,b  \right )\). 
+					
+					
+	%
+	%
+	%	18/02/21
+	%
+	%
+					
+	\begin{demonstration}
+		Fie T operatorul definit de 
+		\begin{displaymath}
+			\left ( Tg \right )\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}k\left ( t,s \right )g\left ( s \right )ds, \forall g\in L^{2}\left ( a,b;\mathbb{K} \right )
+		\end{displaymath}
+										
+		si pentru a.a t\(\in \left ( a,b \right )\).
+		Se vede cu usurinta ca \(L^{2}\left ( a,b;\mathbb{K} \right )\) o sa fie inclus in \(T\). Mai mult, \(\left \| k \right \|_{L^{2}\left ( Q, \mathbb{K} \right )}< 1\), deci \(T\) este o contractie fata de metrica generate de \(\left \| \cdot  \right \|_{L^{2}}\). Prin urmare, are un punct fix unic \(x\in L^{2}\left ( a,b;\mathbb{K} \right )\) care este solutie unica \(L^{2}\) a ecuatiei
+		\begin{displaymath}
+			x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )ds
+		\end{displaymath}
+										
+	\end{demonstration}
+					
+	\subsection{Remarca}
+					
+	Folosind o procedura similara cu cea utilizata pentru Ecuatia Volterra (1.1.2), aflam ca Solutia data de Teorema 1.6 poate fi reprezentata prin formula 
+	\begin{displaymath}
+		x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}R\left ( t,s \right )f\left ( s \right )ds, pentru t\in \left ( a,b \right ),
+	\end{displaymath}
+					
+	unde nucleul resolvent R este dat de 
+					
+	\begin{displaymath}
+		R\left ( t,s \right ) = \sum_{i=1}^{\infty }k_{i}\left ( t,s \right ), (1.2.18)
+	\end{displaymath}
+					
+	cu
+					
+	\begin{displaymath}
+		k_{1}\left ( t,s \right ):= k\left ( t,s \right ), k_{m}\left ( t,s \right ) = \int_{a}^{b}k\left ( t,\tau  \right )k_{m -1}\left ( \tau ,s \right )d\tau , \forall m\geq 2. 
+	\end{displaymath}
+					
+	Seria din (1.2.18) converge in \(L^{2}\left ( Q,\mathbb{K} \right )\) si aproape peste tot pe \(Q\). 
+					
+	\subsection{Remarca}
+					
+	Teorema 1.6 poate fi extinsa la ecuatia neliniara Fredholm 
+	\begin{displaymath}
+		x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}k\left ( t,s,x\left ( s \right ) \right )ds, t\in \left [ a,b \right ]. (1.2.19)
+	\end{displaymath}
+	Intr-adevar , daca \begin{displaymath}
+	f\in L^{2}\left ( a,b;\mathbb{K} \right ), k:Q\times \mathbb{K}\rightarrow \mathbb{K} este masurabila Lebesque,  k\left ( \cdot ,\cdot ,0 \right )\in L^{2}\left ( Q; \mathbb{K} \right ) ,
+	\end{displaymath}
+	si, 
+	\begin{displaymath}
+		\left | k\left ( t,s,v \right ) - k\left ( t,s,w \right ) \right |\leq \alpha \left ( t,s \right )\left | v - w \right |, pentru orice v,w \in \mathbb{K} si \left ( t,s \right ) \in Q,
+	\end{displaymath}
+					
+	pentru un \(\alpha \in L^{2}\left ( Q \right )\) dat cu \(\left \| \alpha  \right \|_{L^{2}\left ( Q \right )} < 1\), atunci exista un unic \(x\in L^{2}\left ( a,b; \mathbb{K} \right )\) care satisfate Ecuatia (1.2.19) aproape peste tot in \(\left (a,b  \right )\). Ca de obicei , concluzia umreaza principiul contractiei Banach. Sa observam doar ca pentru fiecare \(g\in L^{2}\left ( a,b; \mathbb{K} \right )\) functia \(\left (t,s  \right )  \mapsto k\left ( t,s,g\left ( s \right ) \right )\) apartine lui \(L^{2}\left ( Q, \mathbb{K} \right )\), deoarece 
+	\begin{displaymath}
+		\left | k\left ( t,s,g\left ( s \right ) \right ) \right | \leq \left | k\left ( t,s,0 \right ) \right | + \alpha \left ( t,s \right )\left | g\left ( s \right ) \right |, pentru \left ( t,s \right )\in Q.
+	\end{displaymath}
+					
+	\subsection{Remarca}
+	In cazul Ecuatiilor Fredholm, conceptul de solutie locala nu are sens deoarece termenul integral implica valorile \(x\left ( t \right )\) pentru \(t\in \left ( a,b \right )\). Acest lucru arata inca o data ca Ecuatiile Fredholm sunt fundamental diferite de cea de a doua Ecuatie Volterra. 
+	Pe de alta parte , ne putem intreba daca Ecuatia (1.2.16) mai are solutii atunci cand conditia \(\left \| k \right \|_{L^{2}\left ( Q;\mathbb{K} \right )}< 1\) nu mai este indeplinta. Un raspuns complet este dat de alternative Fredholm (vezi Observatia (7.11)). In cazul nostrum specific, \(H = L^{2}\left ( a,b;\mathbb{K} \right ) si A : H \rightarrow H\) este definite de
+	\begin{displaymath}
+		\left ( Ag \right )\left ( t \right ) = \int_{a}^{b}k\left ( t,s \right )g\left ( s \right )ds, \forall g\in H, pentru t\in \left ( a,b \right ). (1.2.20). 
+	\end{displaymath}
+					
+	In mod clar, \(A \in L\left ( H \right )\). Mai mult, avem urmatoarea lema: 
+					
+	\subsection{Lema}
+	Daca \(k\in L^{2}\left ( Q;\mathbb{K} \right )\), atunci operatorul \(A : H \rightarrow H\) definit de (1.2.20) este compact. 
+					
+	\begin{demonstration}
+		Sa presupunem mai intai ca \(k \in C\left ( \left [ a,b \right ]  \times \left [ a,b \right ]; \mathbb{K}\right )\). Pentru a arata ca \(A\) este compact in acest caz, vom folosi criteiul Arzelà-Ascoli (Vezi Cap 2 si observam ca criteriul este valabil cu \(\mathbb{K}\) in loc de \(\mathbb{R}^{k})\). Fie \(B\left ( 0,r \right ), r\in \left ( 0,\infty  \right )\), o minge in \(H\). Atunci multimea \(F = \left \{ Ag; g\in B\left ( 0,r \right ) \right \}\) este o submultime marginita a lui \(C\left ( \left [ a,b \right ];\mathbb{K} \right )\): 
+		\begin{displaymath}
+			\left | \left ( Ag \right )\left ( t \right ) \right |\leq \int_{a}^{b}\left | k\left ( t,s \right ) \right |\cdot \left | g\left ( s \right ) \right |ds \leq \left ( \int_{a}^{b} \left | k\left ( t,s \right ) \right |^{2}ds \right )^{\frac{1}{2}}\left \| g \right \|_{L^{2}}\leq r\left ( b-a \right )^{\frac{1}{2}}sup\left | k \right |< \infty, 
+		\end{displaymath}
+										
+		pentru orice \(g \in B\left ( 0,r \right )\) si orice \(t\in \left [ a,b \right ]\). Multimea \(F\) este de asemenea echicontinua deoarece \(k\) este uniform continuu pe \(\left [ a,b \right ] \times \left [ a,b \right ]\), deci (dupa Criteriul Arzela-Ascoli) \(F\) este relative compact in \(C\left ( \left [ a,b \right ];\mathbb{K} \right )\), deci de asemenea in \(H = L^{2}\left ( a,b;\mathbb{K} \right )\). Prin urmare, \(A\) este intr-adevar un operator compact. Acum, presupunem \(k\in \left ( a,b;\mathbb{K} \right )\). Atunci exista o secventa \(\left (k_{n}  \right )\) in \(C\left ( \left [ a,b \right ] \times  \left [ a,b \right ];\mathbb{K} \right )\) astfel incat \(\left \| k_{n} -k \right \|_{L^{2}\left ( Q;\mathbb{K} \right )}\rightarrow\)  pentru ca \(n\rightarrow \infty\) . Sa asociem cu fiecare \(k_{n}\) operatorul \(A_{n} \in L\left ( H \right )\) definit de 
+		\begin{displaymath}
+			\left (A_{n}g \right )\left ( t \right ) = \int_{a}^{b}k_{n}\left ( t,s \right )g\left ( s \right )ds, \forall g\in H, t\in \left [ a,b \right ],
+		\end{displaymath}
+		care este compact, conform argumentului de mai sus. Un calcul simplu arata ca \(\left \| A_{n}-A \right \|_{L\left ( H \right )}\rightarrow 0\) pentru ca  \(n\infty\)  . Din Teorema 4.11 rezulta ca \(A\) este compact. 
+		Se considera \((in \mathbb{K})\) ecuatia 
+		\begin{displaymath}
+			x\left ( t \right ) = f\left ( t \right ) + \lambda \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )ds, t\in \left [ a,b \right ], (1.2.21)
+		\end{displaymath}
+										
+		unde \(\lambda \in \mathbb{K}, f\in L^{2}\left ( a,b; \mathbb{K} \right ), k\in L^{2} \left ( Q,\mathbb{K} \right ), Q = \left ( a,b \right )\times \left ( a,b \right )\). Conform Teoremei 11.6, Ecuatia (1.2.21) are o solute unica in \(L^{2}\left ( a,b;\mathbb{K} \right )\) cu conditia ca \(\left | \lambda  \right |\) este suficient de mica. Mai precis, asta se intampla daca 
+		\begin{displaymath}
+			\left | \lambda  \right | \cdot \left \| k \right \|_{L^{2}\left ( Q;\mathbb{K} \right )}< 1. 91.2.22)
+		\end{displaymath}
+										
+		Vom arata in cele ce urmeaza ca exista solutii pentru Ecuatia (1.2.21) chiar daca \(\lambda\) nu satisfice conditia (1.2.22). Folosind notatia de mai sus putem scrie Ecuatia (1.2.21) ca o abstracta in \(H = L^{2}\left ( a,b; \mathbb{K} \right )\), si anume 
+		\begin{displaymath}
+			x = f + \lambda Ax(1.2.23)
+		\end{displaymath}
+										
+		Retinem faptul ca \(A^{\ast }\), adjunctul lui \(A\), este dat de 
+		\begin{displaymath}
+			\left (A^{\ast }h  \right )\left ( t \right ) = \int_{a}^{b}\overline{k\left ( s,t \right )}\cdot h\left ( s \right )ds, \forall h \in H. 
+		\end{displaymath}
+										
+		Si de asemenea, \(\left ( \lambda A \right )^{\ast } = \overline{\lambda }A^{\ast }\). 
+											
+		Conform Lemei 1.10 si Teoemei 8.4 operatorul A are o multime umarabila de valori proprii cu \(0\) fiind singurul punct de acumulare posibil; in plus, pentru orice valoare proprie \(\nu \neq 0\) a lui \(A\), \(\dim N\left ( I-\lambda A \right )> \infty\) unde \(\lambda = \frac{1}{\nu }\). Desigur, afirmatii similar sunt valabile pentru \(A^{\ast }\), in special \(\dim N\left ( I-\overline{\lambda }A^{\ast } \right )< \infty\). De fapt, putem demonstra ca, daca \(\nu \neq 0\) este o valoare proprie a lui \(A\), atunci \(\dim N\left ( I-\lambda A \right ) = \dim N\left ( I - \overline{\lambda } A^{\ast }\right )\), unde \(\lambda  = \frac{1}{\nu }. (1.2.24) \)
+		In primul rand . retinem faptul ca \(\overline{\nu }\) este o valoare proprie a lui \(A^{\ast }\) (conform Teoremei 7.10), deci \(\dim N\left ( I - \overline{\lambda }A^{\ast } \right )\geq 1\). Fie \(\left \{ \phi _{1}, \phi _{2},.....,\phi _{m} \right \}\) si \(\left \{ \psi _{1}, \psi _{2},....,\psi _{n} \right \}\) sa fie baze ortonomale in \(N \left ( I-\lambda A \right )\) si respectiv \(N \left ( I-\overline{\lambda} A^{\ast } \right )\). Presupunem prin absurd ca \(m< n\) . Fie \(B\) operatorul asociat cu nucleul 
+		\begin{displaymath}
+			K\left ( t,s \right ) = k\left ( t,s \right ) - \sum_{j=1}^{m}\overline{\phi _{j}\left ( s \right )}\cdot \psi _{j} \left ( t \right )
+		\end{displaymath}
+										
+		si fie \(\phi , \psi  \in H\) solutiile ecuatiilor
+		\begin{displaymath}
+			\phi \left ( t \right ) = \lambda \left ( B\phi  \right )\left ( t \right ) = \lambda \int_{a}^{b} k\left ( t,s \right )\phi \left ( s \right )ds - \lambda \sum_{j=1}^{m}\psi _{j}\left ( t \right )\int_{a}^{b}\overline{\phi _{j}\left ( s \right )}\cdot \phi \left ( s \right )ds, (1.2.25)
+		\end{displaymath}
+										
+		\begin{displaymath}
+			\psi  \left ( t \right ) = \overline{\lambda} \left ( B^{\ast }\psi  \right )\left ( t \right ) = \overline{\lambda }\int_{a}^{b}\overline{k\left ( s,t \right )}\psi \left ( s \right )ds - \overline{\lambda }\sum_{j=1}^{m}\phi _{j}\left ( t \right )\int_{a}^{b}\overline{\psi _{j}\left ( s \right )}\cdot \psi \left ( s \right )ds. (1.2.26)
+		\end{displaymath}
+										
+		Inmultid ecuatia (1.2.25) cu \(\overline{\psi _{k}\left ( t \right )}\) si apoi integrand pe \(\left [ a,b \right ]\) ecuatia rezultata ne conduce la 
+		\begin{displaymath}
+			\left ( \phi ,\psi _{k} \right )_{L^{2}} = \int_{a}^{b}\left [ \lambda \int_{a}^{b}k\left ( t,s \right ) \cdot \overline{\psi _{k}\left ( t \right )}dt \right ]\phi \left ( s \right )ds - \lambda \left ( \phi ,\phi _{k} \right )_{L^{2}} = \left ( \phi ,\psi _{k} \right )_{L^{2}} - \lambda \left ( \phi ,\phi _{k} \right )_{L^{2}}
+		\end{displaymath}
+										
+		prin urmare 
+		\begin{displaymath}
+			\left ( \phi ,\phi _{k} \right )_{L^{2}} = 0, k=1,2,....,m. (1.2.27)
+		\end{displaymath}
+										
+		Din (1.2.25) si (1.2.27) dedeucem faptul ca \(\phi \in N\left ( I-\lambda A \right )\). Astfel \(\phi = \sum_{i=1}^{m}c_{i}\phi _{i}\), cu \(c_{i}\in\mathbb{K}, I = 1,2,….,m\). Acest lucru combinat cu (1.2.27) ne conduce la \(\phi = 0\), prin urmare Ecuatia (1.2.25) are doar Solutia nula. Pe de alta parte, Ecuatia (1.2.26) este satisfacuta de \(\psi _{k}\) pentru orice \(k\in \left \{ m+1,....n \right \}\). Intr-adevar , deoarece \(\left ( \psi _{k} , \psi _{j}\right )_{L^{2}} = 0\) pentru \(j \in \left \{ 1,....,m \right \}\),  \(\in \left \{ m+1,....,n \right \}\), Ecuatia (1.2.26) cu \(\psi =\psi _{k}, k = m+1,……,n\) poate fi scrisa ca \(\psi _{k} = \overline{\lambda }A^{\ast }\psi _{k}, k = m+1,....,n\). Acest lucru inseamna ca \(N\left ( I - \overline{\lambda }B^{\ast } \right ) = N\left ( I - \left (\lambda B   \right )^{\ast } \right )\neq \left \{ 0 \right \}, in timp ce N\left ( I - \lambda B \right ) = \left \{ 0 \right \}\), ceea ce contrazice Teorema 7.10. Prin urmare , \(m\geq n\). Inegalitatea inversa rezulta din faptul ca \(\left ( \overline{\lambda }A^{\ast } \right )^{\ast } = \lambda A\), deci demonstratia lui (1.2.24) este complete. 
+	\end{demonstration}
+					
+	Observam ca in cazul Ecuatiei (1.2.21) asupra Alternativei Fredholm ( vezi observatia 7.11) are urmatoarea forma:
+						
+	\subsection{Teorema}
+					
+	Presupunem \(\lambda \in \mathbb{K}, f\in H = L^{2}\left (a,b;\mathbb{K} \right ), k\in L^{2}\left ( Q; \mathbb{K} \right )\), unde \(Q = \left ( a,b \right )\times \left ( a,b \right ),\) si fie \(A : H \rightarrow H\) operatorul definit de
+	\begin{displaymath}
+		\left (Ag  \right )\left ( t \right ) = \int_{a}^{b}k\left ( t,s \right )g\left ( s \right )ds, \forall g \in H
+	\end{displaymath}
+	si pentru \(t \in \left ( a,b \right )\). 
+					
+	Apoi, una din urmatoarele este valabila:
+	\begin{itemize}
+		\item \(N\left ( I - \lambda A \right ) = \left \{ 0 \right \}\)( daca si numai daca \(N\left ( I - \overline{\lambda} A^{\ast } \right ) = \left \{ 0 \right \}\) si in acest caz ecuatia  
+		      \begin{displaymath}
+		      	x\left ( t \right ) = f\left ( t \right ) + \lambda \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )ds, t\in \left [ a,b \right ] (F)
+		      \end{displaymath} 
+		      		      		      		      		      
+		      are o solutie unica pentru orice \(f\in H\), 
+		\item \(\dim N\left ( I - \lambda A \right ) = \dim N\left ( I - \overline{\lambda} A^{\ast } \right ) = m\), cu \(1\leq m\leq \infty\) si in acest caz Ecuatia (F) este rezolvabila daca si numai daca \(\left ( f, \psi  \right )_{L^{2}} = \int_{a}^{b}f\left ( t \right )\cdot \overline{\psi \left ( t \right )}dt = 0, \forall \psi \in \ker \left ( I - \overline{\lambda}A^{\ast } \right )\),
+		      (echivalent, \(\left ( f, \psi  \right )_{L^{2}} = 0, k\in \left \{ 1,2,....,m \right \}\), unde \(\psi _{k}\) formeaza o baza ortonomala in \(N\left ( I - \overline{\lambda}A^{\ast } \right ))\).
+	\end{itemize}
+					
+	\subsection{Remarca}
+					
+	Deoarece multimea \(S = \left \{\lambda \in \mathbb{K} ; N\left ( I - \lambda A \right ) = \left \{ 0 \right \}\right \}\) este numarabila, rezulta din Teorema 1.11 ca exista ”multe ” \(\lambda\) –uri care nu indeplinesc conditia (1.2.22), dar  pentru care Ecuatia (f) are o (unica) solutie pentru orice \(f\in H = L^{2}\left ( a,b;\mathbb{K} \right )\). Chiar si pentru \(\lambda \in S\) Ecuatia \((F)\)  este rezolvabila daca si numai daca \(f \perp N\left ( I - \overline{\lambda }A^{\ast } \right )\). 
+					
+	Cazul lui Hermitian Lernels: Fromula lui Schmidt 
+					
+	Pe langa conditiile
+	\begin{displaymath}
+		f\in H = L^{2}\left ( a,b;\mathbb{K} \right ), k\in L^{2}\left ( Q;\mathbb{K} \right ), Q = \left ( a,b \right )\times \left ( a,b \right ), 
+	\end{displaymath}
+					
+	pe care le-am utilozat anterior, sa presupunem ca \(k\) este Hermitian, adica, 
+	\begin{displaymath}
+		k\left ( t,s \right ) = \overline{k\left ( s,t \right )}, \forall \left ( t,s \right ) \in Q.
+	\end{displaymath}
+	Apoi, in mod evident, \(A = A^{\ast }\). Conform propozitiei 8.5, fiecare valoare proprie a lui A este reala. 
+	In continuare, inceracm sa folosim teorema Hilbert-Schmidt pentru a investiga ecuatia Fredholm in forma sa abstracta (1.2.23), adica, 
+	\(x = f + \lambda Ax\), ( 1.2.23)
+	De fapt, in cele ce urmeaza, A in (1.2.23) poate sa fie orice operator linear, simetric, compact de dimensiuni infinite , dintr-un spatiu Hilbert separabil \(\left ( H, \left ( \cdot ,\cdot  \right ), \left \| \cdot  \right \| \right )\) in el insusi, si \(f \in H\). 
+					
+	Ca un prim pas, sa presupunem ca \(N\left ( A  \right ) = \left \{ 0 \right \}\) , adica, zero nu este valoare proprie a lui A. Astfel, Teormea Hilbert – Schimidt ( Teorema 8.7) este aplicabila lui \(A\). ( vezi Lema 1.10). Notam cu \(\lambda _{1}, \lambda _{2}, ......,\lambda _{n},.....\) valorile proprii ale lui A date de aceasta teorema si cu \(u_{1},u_{2},....,u_{n},....\) vectorii proprii corespunzatori , adica \(Au_{n} = \lambda_{n}u_{n}, n = 1,2....\). Conform demonstratiei teoremei /Hilbert-Scjmidt, fiecare valoare proprie este luata in considerare de k-ori, unde k inseamna multiplicitatea sa ( dimensiunea spatiului propriu corespunzator) . Sistemul \(\left \{ u_{n} \right \}_{n\geq 1}\) este o baza ortonomata in \(H\). 
+					
+	Pentru \(k \in \mathbb{K} - \left \{ 0 \right \}\) distingem doua cazuri 
+					
+	\begin{enumerate}[(i)]
+		\item \(N\left ( I - \lambda A \right ) = \left \{ 0 \right \}\), adica \(\frac{1}{\lambda}\) nu este o valoare proprie a lui \(A\);
+		\item \(N\left ( I - \lambda A \right ) \neq  \left \{ 0 \right \}\), adica \(\frac{1}{\lambda}\) este o valoare proprie a lui A. 
+	\end{enumerate}
+					
+	Sa discutam mai intai cazul i) . Prin observatia 7.11, Ecuatia (1.2.23) are o solutie unica x
+	pentru fiecare \(f\in H\). Prin formula (8.2.11) din demonstartia Teoremei 8.7 ( Teorema Hilbert – Schmidt) avem
+	\(Ax = \sum_{n=1}^{\infty }\lambda_{n}\left ( x,u_{n} \right )u_{n}\). (1.2.28)
+	Pe de alta parte, folosind Ecuatia (1.2.23) si faptul ca \(A\) este simetrica, obtinem
+	\begin{displaymath}
+		\left ( x,u_{n} \right ) = \left ( f,u_{n} \right ) + \lambda \lambda _{n}\left ( x,u_{n} \right ), n = 1,2,....,
+	\end{displaymath}
+	cum 
+	\begin{displaymath}
+		\left ( x,u_{n} \right ) = \frac{1}{1 - \lambda \lambda _{n}}\left ( f,u_{n} \right ), n = 1,2,.... (1.2.29)
+	\end{displaymath}
+					
+	Acum, din (1.2.23), (1.2.28) si (1.2.29)  putem deriva urmatoarea formula pentru Solutia x a ecuatiei (1.2.23) (cunoscuta ca formula Schmidt)
+	\begin{displaymath}
+		x = f + \lambda \sum_{n=1}^{\infty }\frac{\lambda_{n}}{1 - \lambda \lambda_{n}}\left ( f, u_{n} \right )u_{n}.(1.2.30)
+	\end{displaymath}
+	Acum, sa discutam cazul ii) , adica cand \(\frac{1}{\lambda}\) este o valoare proprie a operatorului A, sa spunem \(\frac{1}{\lambda} = \lambda_{k}\) pentru unii \(k \in \mathbb{N}\). Evident, formula (1.2.30) nu are sens in acest caz. 
+	Notam \(H_{0}:= N\left ( I - \lambda A \right ) = N \left ( \lambda_{k}I - A \right ), H_{1}:= H_{0}^{\perp }\), astfel incat \(H = H_{0}\oplus H_{1}\). Dupa teorema 8.4, \(H_{0}\) este dimensional finit. Notam cu \(m:= \dim H_{0}\in \mathbb{N}\). Fie \(B_{0} = \left \{ v_{1}, v_{2},....,v_{m} \right \}\) o boza a lui \(H_{0}\). Cum \(H\) este un spatiu separabil, la fel si \(H_{1}\). 
+	Tinand cont de faptul ca A este simetric, se vede cu usurinta ca A mapeaza \(H_{1}\) in sine. In mod clar, restrictia \(A_{1} = A|_{H_{1}}\) este simetrica si \(A_{1} \in K\left ( H_{1} \right )\), adica \(A_{1}\) este compact in \(H_{1}\) , care este un subspatiu Hilbert al lui H cu acelasi \(\left ( \cdot ,\cdot  \right )\) si \(\left \| \cdot  \right \|\). Evident, \(N\left ( A_{1} \right ) = \left \{ 0 \right \}\) deci Teorema Hilbert-Schmidt este aplicabila in \(H_{1}\) si \(A_{1}\) si arata existent unei secvente de valori proprii (reale) ale lui \(A_{1}\) ( deci ale lui A) , care nu include \(\lambda _{k}\), si ale unei baze ortonormale corespunzatoare in \(H_{1}\), cu 
+	\(A_{1}u_{n} = Au_{n} = \lambda _{n}u_{n}, n\in\mathbb{N}, n\neq k\).
+	Conform analizei anterioare corespunzatoare cazului i), Ecuatia (1.2.23) are o solutie ( unica) \(x = x_{1} in H_{1}\) ( adica, \(x_{1} - \lambda A_{1}x_{1} = f\)) daca si numia daca \(f\in H_{1}\), si (vezi (1.2.30)
+	\begin{displaymath}
+		x_{1} = f + \lambda \sum_{\lambda_{n}\neq \lambda_{k}}\frac{\lambda_{n}}{1 - \lambda \lambda _{n}}\left ( f, u_{n} \right )u_{n}. 
+	\end{displaymath}
+					
+					
+	Daca luam in considerare (1.2.23) in H, atunci \(f\in H_{1}\) si pentru orice \(y\in H_{0}\),
+	\begin{displaymath}
+		x = f+ \lambda \sum_{\lambda_{n}\neq \lambda_{k}}\frac{\lambda_{n}}{1 - \lambda \lambda _{n}}\left ( f, u_{n} \right )u_{n} + y
+	\end{displaymath}
+					
+	este o solutie a ecuatiei (1.2.23). In consecinta, formula
+	\begin{displaymath}
+		x = f+ \lambda \sum_{\lambda_{n}\neq \lambda_{k}}\frac{\lambda_{n}}{1 - \lambda \lambda _{n}}\left ( f, u_{n} \right )u_{n} + \sum_{i=1}^{m}c_{i}v_{i},(1.2.31)
+	\end{displaymath}
+	cu \(c_{1},....,c_{m} \in\mathbb{K}\) da toate solutiile Ecuatiei (1.2.23). 
+	Acum ne indreptam atentia asupra cazului in care \(N\left ( A \right ) \neq \left \{  0\right \}\). Notand \(Y_{0} = N\left ( A \right )\) si \(Y_{1} = Y_{0}^{\perp }\), putem scrie \(H = Y_{0}\oplus Y_{1}\). putem presupune ca \(Y_{0}\) este un subspatiu propriu al lui H, in caz contrar avem \(A = 0\), care este un caz trivial. Este usor de observant ca \(Y_{1}\)  o sa fie inclus in \(A\). Evident, \(Y_{1}\) este un subspatiu Hilbert al lui H fata de aceeleasi \(\left ( \cdot ,\cdot  \right )\) si \(\left \| \cdot  \right \|\) , iar restrictia \(\tilde{A} = A|_{Y_{1}}\) este simetrica, compacta si \(N\left ( \tilde{A} \right ) = \left \{ 0 \right \}\). Daca \(Y_{1}\)  este dimensional infinit, atunci teorema Hilbert – Schmidt este aplicabila lui \(Y_{1}\) si \(\tilde{A}\). Pentru a rezolva Ecuatia (1.2.23) folosim descompunerea \(x = x_{0}+x_{1}, f = f_{0} + f_{1}\), unde \(x_{0},f_{0} \in Y_{0}\) si \(x_{1},f_{1} \in Y_{1}\). Astfel (1.2.23) devine 
+	\begin{displaymath}
+		x_{0} - f_{0} = -x_{1} + f_{1} + \lambda Ax_{1}, 
+	\end{displaymath}
+	prin urmare ambele parti sunt egale cu \(0\), deci \(x_{0} = f_{0}\) si, 
+	\begin{displaymath}
+		x_{1} = f_{1} + \lambda \tilde{A}x_{1}. (1.2.32)
+	\end{displaymath}
+	In mod clar, pentru fiecare \(f\in H, f = f_{0} + f_{1}, x\) este solutie unica e Ecuatiei (1.2.23) daca si numai daca \(x - f_{0} + x_{1}\), unde \(x_{1} \in Y_{1}\) satisfice Ecuatia (1.2.32).  Merita subliniat faptul ca Ecuatia (1.2.32) , cu \(\tilde{A} : Y_{1}\rightarrow Y_{1}, N\left ( \tilde{A} \right ) = \left \{ 0 \right \}\), se afla in situatia pe care am avut-o mai inainte, deci se poate discuta in mod similar solubilitatea (1.2.32) in cee ace priveste vectorii proprii a lui \(\tilde{A}\) (adica vectorii proprii ai lui A corespunzatori vectorilor proprii nrnuli). Daca se dovedeste ca \(Y_{1}\) este dimensional finit, atunci Ecutia (1.2.32) se reduce la un sistem algebraic linear care poate fi rezolvat folosind calculi algebrice elementare. 
+	Exemplu. Fie \(H = L^{2}\left ( -\pi ,\pi  \right )\) cu produsul scalar si norma obisnuite. Luam in cosiderare baza ortonormala obisnuita in \(H\), adica (vezi Capitolul 6), 
+	\begin{displaymath}
+		u_{0} = \frac{1}{\sqrt{2\pi }}, u_{2k-1}\left ( t \right ) = \frac{1}{\sqrt{\pi }}\cos \left ( kt \right ),
+		u_{2k}\left ( t \right ) = \frac{1}{\sqrt{\pi }}\sin\left ( kt \right ), k= 1,2,...
+	\end{displaymath}
+	Pentru un \(m\in \mathbb{N}\) dat, devine 
+	\begin{displaymath}
+		k\left ( t,s \right ) = \sum_{n=m}^{\infty }\frac{1}{n^{2}}u_{n}\left ( t \right )u_{n}\left ( s \right ), \left ( t,s \right )\in Q = \left ( -\pi ,\pi  \right )\times -\left ( -\pi ,\pi  \right ).
+	\end{displaymath}
+	In mod clar, \(k\in C\left ( \bar{Q} \right )\subset L^{2}\left ( Q \right )\). Daca \(A\) este operator definit de (1.2.20), unde \(a = -\pi, b = \pi\), cu acest nucleu (care este simetric, deci Hermitian), atunci \(Ag=0\) pentru fiecare g care este o combinatie liniara a \(u_{0}, u_{1},....,u_{m-1}\). Prin urmare
+	\begin{displaymath}
+		\ Span \left \{ u_{0}, u_{1},....,u_{m-1} \right \} \subset N\left ( A \right ). 
+	\end{displaymath}
+	Pe de alta parte, daca \(Af=0\), unde \(f\) este un membru al lui \(H\), adica \(f = \sum_{k=0}^{\infty }\left ( f,u_{k} \right )_{L^{2}}u_{k}\) (care este expansiunea Fourier a lui f ), atunci 
+	\begin{displaymath}
+		0 = \left ( Af,f \right )_{L^{2}} = \left (\sum_{n=m}^{\infty }\frac{1}{n^{2}}\left ( f,u_{n} \right )_{L^{2}}u_{n}, \sum_{k=0}^{\infty }\left ( f,u_{k} \right )_{L^{2}}u_{k}  \right )_{L^{2}} = \sum_{n=m}^{\infty }\frac{1}{n^{2}}\left ( f,u_{n} \right )_{L^{2}}^{2},
+	\end{displaymath}
+					
+	prin urmare \(\left ( f,u_{n} \right )_{L^{2}} = 0\) pentru orice \(n\geq m\) si deci \(f = \sum_{k=0}^{m-1}\left ( f,u_{k} \right )_{L^{2}}u_{k}\), adica \(f\in \ Span \left \{ u_{0}, u_{2},....,u_{m-1} \right \}\), Prin urmare,
+	\begin{displaymath}
+		N\left ( A \right ) = \ Span \left \{ u_{0}, u_{2},....,u_{m-1} \right \}
+	\end{displaymath}
+	Pe de alta parte, daca alegem, de exemplu,
+	\begin{displaymath}
+		k\left ( t,s \right ) = 1+ \sum_{n=1}^{\infty }\frac{1}{n^{2}}u_{n}\left ( t \right )u_{n}\left ( s \right ), \left ( t,s \right )\in Q, 
+	\end{displaymath}
+	atunci operatorul corespunzator A satisfice conditia \(N\left ( A \right ) = \left \{ 0 \right \} \). 
+					
+	\subsection{Comentarii}
+					
+	\begin{itemize}
+		\item Daca in ecuatia \begin{displaymath} x\left ( t \right ) = f\left ( t  \right ) + \lambda \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )\ ds, t \in \left [ a,b \right ] \end{displaymath}, ( care este (1.2.21) de mai sus) presupunem \(f\in C\left [ a,b \right ]\) si \(k\in  C\left (\left [ a,b \right ] \times \left [ a,b \right ] \right )\), atunci \(x\in C\left [ a,b \right ]\). In plus, daca \(f\) si \(k\) sunt mai regulate, atunci si \(x\) este. 
+		      		      		      		      		          
+		\item Teoria de mai sus functioneaza si daca \(\left [ a,b \right ]\) este inlocuta cu un domeniu marginit \(D\subset \mathbb{R}^{N}\) sau cu granite unui astfel de domeniu. Este bine cunoscut faptul ca principalele problem cu valori la limita eliptica (Dirichlet, Neumann, Robin) pot fi reduse, prin utilizarea potentialelor, la ecuatii Fredholm care traiesc la limita domeniilor corespnzatoare. Astefl, teoria de mai sus poate fi folosita pentru a rezolva astfel de problem. 
+		      		      		      		      		          
+		\item Urmatoare extensie neliniara a exuatiei Fredholm, cunoscuta sub numele de ecuatie Hammerstein, \begin{displaymath} x\left ( t \right ) = f\left ( t \right ) + \int_{D}k\left ( t,s \right )g\left ( s,x\left ( s \right ) \right ) \ ds, \forall t\in D, \end{displaymath} unde \(g\) este o functie neliniara, este de asemenea discutata intens in literature (vezi [20], [ 9], [ 26 ]). 
+	\end{itemize}
+					
+	\chapter{Exercitii}
+					
+	\begin{enumerate}
+		\item Calcuati nucleele rezolutive ale urmatarelor ecuatii Volterra si apoi gasiti solutiile corespunzatoare:
+		      \begin{enumerate}[label=(\alph*)]
+		      	\item \(x\left ( t \right ) = e^{t^{2}} + \int_{0}^{t}e^{t^{2} - s^{2}}x\left ( s \right )\ ds , t\geq 0;\)
+		      	\item \(x\left ( t \right ) = e^{t} \sin t+ \int_{0}^{t}\frac{2 + \cos t}{2+ \cos s}x\left ( s \right )\ ds , t\geq 0;\)
+		      	\item \(x\left ( t \right ) =  t+ \int_{0}^{t}\left ( t-s \right )x\left ( s \right )\ ds , t\geq 0\).
+		      \end{enumerate}
+		      		      		      		      		          
+		      Ne amintim ca pentru un nucleu dat \(k = k\left ( t,s \right ) \in C\left ( \Delta  \right ), \Delta = \left \{ \left ( t,s \right ) \in \mathbb{R}; a\leq s\leq t\leq b \right \}\), nucleul resolvent \(R \left ( t,s \right )\) este definit prin 
+		      		      		      		      		      
+		      \begin{displaymath}
+		      	R \left ( t,s \right ) = \sum_{n = 1}^{\infty } k_{n}\left ( t,s \right ), \left ( t,s \right ) \in \Delta,
+		      \end{displaymath} 
+		      unde
+		      \begin{displaymath}
+		      	k_{1}\left ( t,s \right ) = k\left ( t,s \right ),
+		      \end{displaymath}
+		      		      		      		      		      
+		      \begin{displaymath}
+		      	k_{n}\left ( t,s \right ) = \int_{s}^{t}k\left ( t,\tau  \right )k_{n-1}\left ( \tau ,s \right )d\tau , \left ( t,s \right ) \in \Delta , n = 2,3,....
+		      \end{displaymath}
+		      		      		      		      		      
+		      Retinem faptul ca intervalul \(\left [ a,b \right ]\) ar putea fi inlocuit cu \(\left [ a,\infty  \right )\) daca ecuatia Volerra corespunzatoare este considerata \(\left [ a,\infty  \right )\). 
+		      			      			      			      			      	
+		      	\begin{enumerate}[label=(\alph*)]
+		      		\item Prin calcule usoare gasim 
+		      		      \begin{displaymath}
+		      		      	R \left ( t,s \right ) = e^{t^{2}- s^{2} + t - s }, x\left ( t \right ) = e^{t\left ( t+1 \right )}, t\geq 0. 
+		      		      \end{displaymath}
+		      		      Alternativ, notand \(y\left ( t \right ) = e^{-t^{2}}x\left ( t \right ) \), ecuatia data poate fi scrisa astfel 
+		      		      \(y\left ( t \right ) = 1 + \int_{0}^{t} y\left ( s \right )ds, t\geq 0,\)
+		      		      care este echivalenta cu problema 
+		      		      \begin{displaymath}
+		      		      	\left\{\begin{matrix}
+		      		      	{y}'\left ( t \right ) = y\left ( t \right ), t\geq 0, \\ 
+		      		      	y\left ( 0 \right ) = 1,
+		      		      	\end{matrix}\right.
+		      		      \end{displaymath}
+		      		      deci obtinem din nou solutia \(x\).  
+		      		      		      		      		      		      		      		      		      		      
+		      		      		      		      		      		      		      		      		      		      
+		      		\item \(R\left ( t,s \right ) = \frac{1+ \cos t}{2+ \cos s}e^{t-s},
+		      		      x\left ( t \right ) = e^{t}\sin t+ e^{t}\left ( 2+ \cos t \right ) \ln \frac{3}{2t + \cos t}.\)
+		      		      		      		      		      		      		      		      		      		      
+		      		\item \(R\left ( t,s \right ) = \sinh \left ( t-s \right ), x\left ( t \right ) = \sinh t.\)
+		      		      		      		      		      		      		      		      		      		      
+		      	\end{enumerate}
+		      			      			      			      			      	    
+		      	\item Rezolvati urmatoarele ecuatii integrale transformandu-le in problem Cauchy pentru ecuatii diferentiale:
+		      	\begin{enumerate}[label=(\alph*)]
+		      		\item x\(\left ( t \right ) =  t - \frac{t^{3}}{6} + \int_{0}^{t}\left ( t-s+1 \right )x\left ( s \right ) \ ds , t\geq 0;\)
+		      		\item \(x\left ( t \right ) =  t^{3} + 1 - \int_{0}^{t}\left ( t-s \right )x\left ( s \right ) \ ds , t\geq 0;\)
+		      		\item \(x\left ( t \right ) =  3t - \int_{0}^{t}e^{t-s}x\left ( s \right ) \ ds , t\geq 0.\)
+		      	\end{enumerate}
+		      			      			      			      			      	        
+		      	\begin{enumerate}[label=(\alph*)]
+		      		\item Daca \(x\) este o solutie a integralei date, atunci \(x\left ( 0 \right ) = 0 si {x}'\left ( t \right ) = a - \frac{t^{2}}{2} + x\left ( t \right ) + \int_{0}^{t}x\left ( s \right )ds, t\geq 0\). 
+		      		      Prin urmare \({x}'\left ( 0 \right ) = 1\) si 
+		      		      \({x}'' = {x}' \left (t  \right ) + x\left ( t \right ) – t\). 
+		      		      Astfel am obtinut problema Cauchy 
+		      		      \begin{displaymath}
+		      		      	\left\{\begin{matrix}
+		      		      	{x}'' - {x}'\left ( t \right ) - x\left ( t \right ) = -t, t\geq 0\\ 
+		      		      	x\left ( 0 \right ) = 0, {x}'\left ( 0 \right ) = 1. 
+		      		      	\end{matrix}\right.. 
+		      		      \end{displaymath}
+		      		      In schimb, daca \(x\) este o solutie la aceasta problema, atunci \(x\) satisfice ecuatia integral data.
+		      		      Prin calculi usoare gasim 
+		      		      \begin{displaymath}
+		      		      	x\left ( t \right ) = c_{1}e^{\left (\frac{ 1 + \sqrt{5}}{2} \right )}+ c_{2}e^{\left ( \frac{1-\sqrt{5}}{2} \right )} + t – 1, 
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      		      		      
+		      		      cu 
+		      		      \(c_{1} = \frac{5 - \sqrt{5}}{2}, c_{2} = \frac{5 + \sqrt{5}}{2}\). 
+		      		      		      		      		      		      		      		      		      		      
+		      		      		      		      		      		      		      		      		      		      
+		      		\item Problema Cauchy echivalenta este 
+		      		      \begin{displaymath} 
+		      		      	\left\{\begin{matrix}
+		      		      	{x}''\left ( t \right ) + x\left ( t \right ) = 6t, t\geq 0\\ 
+		      		      	x\left ( 0 \right ) = 1, {x}'\left ( 0 \right ) = 0. 
+		      		      	\end{matrix}\right.
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      		      		      
+		      		      Prin calcule simple gasim 
+		      		      \(x\left ( t \right ) = \cos t - 6 \sin t  + 6t, t\geq 0.\)
+		      		      		      		      		      		      		      		      		      		      
+		      		\item Daca x este o solutie , atunci \(x\left ( 0 \right ) = 0\). Prin diferentiere obtinem din ecuatia integral data 
+		      		      \({x}'\left ( t \right ) = 3 - x\left ( t \right ) - \int_{0}^{t}e^{t-s}x\left ( s \right )\ ds , t\geq 0\), 
+		      		      deci x satisfice problema
+		      		      		      		      		      		      		      		      		      		      
+		      		      \begin{displaymath}
+		      		      	\left\{\begin{matrix}
+		      		      	{x}'\left ( t \right ) = 3 - 3t , t\geq 0\\ 
+		      		      	x\left ( 0 \right ) = 0
+		      		      	\end{matrix}\right.
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      		      		      
+		      		      Care este echivalenta cu ecuatia integrala data si are solutia 
+		      		      \(x\left ( t \right ) = \frac{3}{2}t\left ( 2-t \right ), t\geq 0\).
+		      		      		      		      		      		      		      		      		      		      
+		      	\end{enumerate}
+		      			      			      			      			      	        
+		      	\item Rezolvati urmatoarele ecuatii Colterra de gradul I:
+		      			      			      			      			      	
+		      	\begin{enumerate}[label=(\alph*)]
+		      		\item \(\int_{0}^{t}\left ( 1 - t^{2}  + s^{2}\right ) \cdot  x\left ( s \right ) \ ds  = \frac{t^{2}}{2}, t\geq 0;\)
+		      		\item \(\int_{0}^{t}\cos \left ( t- s \right ) \cdot  x\left ( s \right ) \ ds  = 2t\left ( t+1 \right ), t\geq 0;\)
+		      		\item \(\int_{0}^{t}e^{t+s} \cdot  x\left ( s \right ) \ ds  = t \ cos t , t\geq 0. \)
+		      	\end{enumerate}
+		      			      			      			      			      	
+		      	\begin{enumerate}[label=(\alph*)]
+		      		\item Din ecuatia integral data obtinem prin diferentiere 
+		      		      \(x\left ( t \right ) -2t \int_{0}^{t}x\left ( s \right )\ ds = t, t\geq 0\)
+		      		      Atunci \(y\left ( t \right ) = \int_{0}^{t}x\left ( s \right )  \ ds\) satisfice problema Cauchy 
+		      		      \begin{displaymath}
+		      		      	\left\{\begin{matrix}
+		      		      	{y}'\left ( t \right ) - 2ty\left ( t \right ) = t, t\geq 0\\ 
+		      		      	y\left ( 0 \right ) = 0
+		      		      	\end{matrix}\right.
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      		      		      
+		      		      care are Solutia 
+		      		      \(y\left ( t \right ) = \frac{1}{2}\left ( e^{t^{2}}- 1 \right ), t\geq 0\Rightarrow x\left ( t \right ) = te^{t^{2}}, t\geq 0\).
+		      		      		      		      		      		      		      		      		      		      
+		      		\item Din ecuatia integral data obtinem prin diferentiere 
+		      		      \begin{displaymath}
+		      		      	x\left ( t \right ) - \int_{0}^{t}\sin \left ( t-s \right )\cdot x\left ( s \right ) \ ds = 2\left ( 2t + 1 \right ), t\geq 0 
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      		      		      
+		      		      si deci \(x\left ( 0 \right ) = 2\). O alta diferentiere duce la 
+		      		      \begin{displaymath}
+		      		      	{x}'\left ( t  \right ) - \int_{0}^{t}\cos \left ( t-s \right ) \cdot  x\left ( s \right ) \ ds = 4, t\geq 0.
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      		      		      
+		      		      Deci am obtinut problema 
+		      		      \begin{displaymath}
+		      		      	\left\{\begin{matrix}
+		      		      	{x}'\left ( t \right ) = 2\left ( t^{2} + t + 2 \right ), t\geq 0\\ 
+		      		      	x\left ( 0 \right ) = 2,
+		      		      	\end{matrix}\right.
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      		      		      
+		      		      care este echivalenta cu ecuatia integral data si ne ofera Solutia 
+		      		      \begin{displaymath}
+		      		      	x\left ( t \right ) = \frac{2}{3}t^{3} + t^{2} + 4t + 2, t\geq 0.
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      		      		      
+		      		      		      		      		      		      		      		      		      		      
+		      		\item \(x\left ( t \right ) = \left ( \cos t - t\cos t - t\sin t  \right )e^{-2t}, t\geq  0.\)  
+		      		      		      		      		      		      		      		      		      		      
+		      		      		      		      		      		      		      		      		      		      
+		      	\end{enumerate}
+		      			      			      			      			      	
+		      	\item Fie \(h \in C\left [ 0,b \right ]\), unde \(b \in \left ( 0,\infty  \right )\). Definit de  \(k\left ( t,s \right ) = h\left ( t-s \right ), 0\leq s \leq  t\leq b\). Sa se arate ca nucleul resolvent \(R\left ( t,s \right )\) asociat cu \(k\left ( t,s \right )\) depinde numai de \(t-s\). 
+		      			      			      			      			      	
+		      	\(R\left ( t,s \right )\) este o functie continuape triunghiul \(\Delta _{0} = \left \{ \left ( t,s \right );0\leq s\leq t\leq b \right \}\) , fiind definit prin 
+		      	\begin{displaymath}
+		      		R\left ( t,s \right ) = \sum_{n = 1}^{\infty }k_{n}\left ( t,s \right ), \left ( t,s \right )\in \Delta _{0},
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	unde
+		      	\begin{displaymath}
+		      		k_{1}\left ( t,s \right ) = k\left ( t,s \right ) = h\left ( t-s \right )
+		      		k_{n}\left ( t,s \right ) = \int_{s}^{t}k\left ( t,\tau  \right )k_{n-1}\left ( \tau ,s \right )\ d\tau  = 
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	\begin{displaymath}
+		      		= \int_{s}^{t} h\left ( t - \tau  \right )k_{n-1}\left ( \tau ,s \right ) \ d \tau , \left ( t,s \right ) \in \Delta _{0}, n = 2,3,.... 
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	Deoarece \(k_{1}\) depinde numai de \(t-s\) , putem observa cu usurinta ( prin schimbarea de variablia) ca asa este si \(k_{2}\). Prin inductie rezulta ca toate \(k_{n}\) – urile depind numai de \(t-s\)  si rezulta ca la fel se intampla si cu \(R\). 
+		      			      			      			      			      	
+		      	\item Fie \(a,b \in \mathbb{R}, a< b\). Fie functiile ne-negative, \(f,x \in C\left [ a,b \right ], k\in C\left ( \Delta  \right )\) , unde \(\Delta  = \left \{ \left ( t,s \right ) \in \mathbb{R}; a\leq s\leq t\leq b\right \}\). Daca 
+		      	\begin{displaymath}
+		      		x\left ( t \right ) \leq f\left ( t \right ) + \int_{a}^{k}k\left ( t,s \right )x\left ( s \right )\ ds , t\in \left [ a,b \right ]
+		      	\end{displaymath}
+		      	atunci 
+		      			      			      			      			      	
+		      	\begin{displaymath}
+		      		x\left ( t \right ) \leq f\left ( t \right ) + \int_{a}^{k}R\left ( t,s \right )f\left ( s \right )\ ds , t\in \left [ a,b \right ],
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	unde \(R\left ( t,s \right )\) este nucleul resolvent asociat cu \(k\left ( t,s \right )\).
+		      			      			      			      			      	
+		      			      			      			      			      	
+		      	Putem arata cu usurinta prin inductie faptul ca \(R\left ( t,s \right ) \geq 0, 0\leq s\leq t\leq b..\) 
+		      	Apoi, inseamna ca 
+		      	\begin{displaymath}
+		      		\phi \left ( t \right ) = f\left ( t \right ) + \int_{a}^{t} k\left ( t,s \right ) x\left ( s \right ) \ ds - x\left ( t \right ) \geq 0, t \in \left [ a,b \right ].
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	Prin urmare ,
+		      	\begin{displaymath}
+		      		x\left ( t \right ) = f\left ( t \right ) - \phi \left ( t \right ) + \int_{a}^{t} k\left ( t,s \right )x\left ( s \right ) \ ds , t \in \left [ a,b \right ], 
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	ceea ce implica, 
+		      	\begin{displaymath}
+		      		x\left ( t \right ) = f\left ( t \right ) - \phi \left ( t \right ) + \int_{a}^{t} R\left ( t,s \right ) \left [ f\left ( s \right ) - \phi \left ( s \right ) \right ]\ ds = 
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	\begin{displaymath}
+		      		= f\left ( t \right ) + \int_{a}^{t} R\left ( t,s \right )f\left ( s \right ) \ ds - \left [ \phi \left ( t \right ) + \int_{a}^{t}R\left ( t,s \right )\phi \left ( s \right ) \ ds \right ], t \in \left [ a,b \right ].
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      			      			      			      			      	 
+		      	De unde rezulta concluzia, care este evidenta. 
+		      			      			      			      			      		
+		      	\item Fie a,b \(\in \left ( 0,\infty  \right )\). Definit de 
+		      			      			      			      			      	
+		      	\begin{displaymath}
+		      		D = \left \{ \left ( t,s \right );0\leq t\leq a, 0\leq s\leq b \right \}, Q = \left \{ \left ( t,s,\xi , \eta  \right );0\leq \xi \leq t\leq a, 0\leq \eta \leq s\leq b \right \}. 		      	
+		      	\end{displaymath}
+		      			      			      			      	
+		      	Se considera ecuatia integrala
+		      	\begin{displaymath}
+		      		x\left ( t,s \right ) = f\left ( t,s \right ) + \int_{0}^{t}\int_{0}^{s}k\left ( t,s,\xi ,\eta  \right )\ d\xi d\eta , \left ( t,s \right ) \in D. (E)
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	Presupunem ca \(k \in C\left ( Q \right ):= C\left ( Q,\mathbb{R} \right )\). 
+		      	Sa se aratre ca pentru orice \(f \in C\left ( D \right ):= C\left ( D,\mathbb{R} \right )\) exista o functie unica \(x = x\left ( t,s \right ) \in C\left ( D \right )\) care satisfice ecuatia \((E)\) pentru orice \(\left ( t,s \right ) \in D\). 
+		      			      			      			      			      	
+		      	Preferam sa folosim urmatoarea norma asemanatoare lui Bielecki in \(X = C \left ( D \right ) : 
+		      	\left \| g \right \| _{B} = \underset{\left ( t,s \right )\in Q}{sup}e^{-M\left ( t+s \right )}\left | g\left ( t,s \right ) \right |, g\in X,\)
+		      	unde \(M\) este o constanta pozitiva mare. Definita de un operator \(P\) pe \(X\) prin 
+		      	\begin{displaymath}
+		      		\left ( Pg \right )\left ( t,s \right ) = f\left ( t,s \right ) + \int_{0}^{t}\int_{0}^{s}k\left ( t,s,\xi ,\eta  \right )g\left ( \xi ,\eta  \right ) \ d\eta  \ d\xi , \left ( t,s \right ) \in D, g \in X.
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	In mod clar, \(P\) il mapeaza pe \(X\), iar pentru \(g_{1}, g_{2} \in X\) si \(\left ( t,s \right )  \in D\) avem 
+		      			      			      			      			      	
+		      	\begin{displaymath}
+		      		\left | \left ( Pg_{1} \right )\left ( t,s \right ) - \left ( Pg_{2} \right )\left ( t,s \right ) \right | \leq  C\int_{0}^{t}\int_{0}^{s} \left | g_{1}\left ( \xi ,\eta  \right ) - g_{2}\left ( \xi ,\eta  \right ) \right | \ d\eta  \ d\xi  =
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	\begin{displaymath}
+		      		= C\int_{0}^{t}\int_{0}^{s} e^{+M\left ( \eta +\xi  \right )}e^{-M\left ( \eta +\xi  \right )}\left | g_{1}\left ( \xi ,\eta  \right ) - g_{2} \left ( \xi ,\eta  \right )\right | \ d\eta  \ d\xi \leq
+		      	\end{displaymath}
+		      			      			      			      	
+		      	\begin{displaymath}
+		      		\leq C\left \| g_{1} - g_{2} \right \|_{B} \int_{0}^{t}\int_{0}^{s} e^{M\left ( \eta +\xi  \right )} \ d\eta  \ d\xi   = \frac{C}{M^{2}}\left \| g_{1} - g_{2} \right \|_{B}\left ( e^{Mt}  - 1\right )\left ( e^{Ms} - 1 \right ), 
+		      	\end{displaymath}
+		      			      			      			      	
+		      			      			      			      			      	
+		      			      			      			      			      	
+		      	unde \(C = \underset{ \left ( t,s,\xi ,\eta  \right ) \in Q}{ sup}\left | k\left ( t,s,\xi ,\eta  \right ) \right | < \infty\). Rezulta ca 
+		      	\begin{displaymath}
+		      		e^{-M\left ( t+s \right )} \left | \left ( Pg_{1} \right ) \left ( t,s \right ) - \left ( Pg_{2} \right )\left ( t,s \right )\right | \leq
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	\begin{displaymath}
+		      		\leq \frac{C}{M^{2}}\left \| g_{1} - g_{2} \right \|_{B}\left ( 1 - e ^{-Mt} \right )\left ( 1 - e^{-Ms} \right )\leq \frac{C}{M^{2}}\left \| g_{1} - g_{2}\right \|_{B}, 
+		      	\end{displaymath}
+		      			      			      			      	
+		      			      			      			      			      	
+		      	pentru orice \(\left ( t,s \right )\in D, g_{1}, g_{2} \in X\). Prin urmare 
+		      	\begin{displaymath}
+		      		\left \| Pg_{1} - Pg_{2} \right \|_{B} \leq \frac{C}{M^{2}}\left \| g_{1} - g_{2} \right \|_{B}, g_{1}, g_{2}\in X, 
+		      	\end{displaymath}
+		      			      			      			      			      	
+		      	deci \(P\) este o contractie pe \(\left ( X, \left \| \cdot  \right \|_{B} \right )\) pentru \(M^{2} > C\). Prin urmare, conform principiului contratiei Banach, \(P\) are un punct fix unic \(x = x\left ( t,s \right )\in X\) care este Solutia unica a ecuatiei \((E)\).  
+		      			      			      			      			      	        
+		      	\item Se considera problema 
+		      	\begin{displaymath}
+		      		\left\{\begin{matrix}
+		      		{x}'\left ( t \right ) = f\left ( t \right ) + \int_{0}^{t}k\left ( t,s \right )x\left ( s \right ) \ ds , t\in \left ( 0,T \right ), 
+		      		& \\ x\left ( 0 \right ) = x_{0}     
+		      		\end{matrix}\right.
+		      	\end{displaymath}
+		      			      			      			      	
+		      	unde \(x_{0} \in \mathbb{R} , T \in \left ( 0,\infty  \right ), f\in L^{1}\left ( 0,T \right ) , k\in C\left ( \Delta  \right )\) si \(\Delta = \left \{ \left ( t,s \right ) \in \mathbb{R}^{2}; 0\leq s\leq t\leq T \right \}\). 
+		      	Aratati ca exista o functie unica \(x \in W^{1,1}\left ( 0,T \right )\) care satisfice ecuatia integro-diferentiala de mai sus pentru orice \(t \in \left ( 0,T \right )\) si conditia initiala \(x\left ( 0 \right ) = x_{0}\). 
+		      			      			      			      	
+		      			      			      			      	
+		      	Problema data este echivalenta cu urmatoarea ecuatie integral in \(X = C\left [ 0, T \right ]\)
+		      	\begin{displaymath}
+		      		x\left ( t \right ) = x_{0} + \int_{0}^{t}f\left ( s \right )\ ds + \int_{0}^{t}\left ( \int_{0}^{s} k\left ( s,\tau  \right )x\left ( \tau  \right ) \ d\tau \right )\ ds, t \in \left [ 0, T \right ]. (*)
+		      	\end{displaymath}
+		      			      			      			      	
+		      	Definim \(P : X \rightarrow X\) prin 
+		      	\begin{displaymath}
+		      		\left ( Pg \right )\left ( t \right ) = x_{0} + \int_{0}^{t}f\left ( s \right ) \ ds + \int_{0}^{t}\left ( \int_{0}^{s}k\left ( s,\tau  \right )g\left ( \tau  \right ) \ d\tau  \right ) \ ds, t \in \left [ 0, T \right ], g \in X.
+		      	\end{displaymath}
+		      			      			      			      	
+		      	Se poate arata printr-o abordare cu punct fix faptul ca \(P\) are un punct unic fix \(x \in X\), care este solutia unica a ecuatiei (*), si deci a problemei date. 
+		      			      			      			      		
+		      	\item Rezolvati urmatoarele ecuatii integrale, unde \(\lambda\) este un parametru real: 
+		      	\begin{enumerate}[label=(\alph*)]
+		      		\item \(x\left ( t \right ) = \cos t + \lambda \int_{0}^{\pi }\sin \left ( t-s \right )\cdot x\left ( s \right ) \ ds;\)
+		      		\item \(x\left ( t \right ) =  t + \lambda \int_{0}^{2\pi }\left | \pi - s \right |\sin t \cdot x\left ( s \right ) \ ds;\)
+		      		\item \(x\left ( t \right ) = f \left (t  \right ) + \lambda \int_{0}^{1 }\left ( 1 - 3ts  \right )\cdot x\left ( s \right ) \ ds , f \in L^{2}\left ( 0,1 \right ).\) 
+		      	\end{enumerate}
+		      			      			      			      		
+		      			      			      			      		
+		      	\begin{enumerate}[label=(\alph*)]
+		      		\item Ecuatia poate fi scrisa ca 
+		      		      \begin{displaymath}
+		      		      	x\left ( t \right ) = \cos t + \lambda c_{1}\sin t + \lambda c_{2}\cos t, (*)
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      
+		      		      cu 
+		      		      \begin{displaymath}
+		      		      	c_{1} = \int_{0}^{\pi }\cos s \cdot x\left ( s \right ) \ ds c_{2} = -\int_{0}^{\pi }\sin s \cdot x\left ( s \right ) \ ds. (**)
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      
+		      		      Daca inlocuim (*) in (**), obtinem urmatorul sistem algebraic in \(c_{1}, c_{2}\):
+		      		      \begin{displaymath}
+		      		      	\left\{\begin{matrix}
+		      		      	c_{1} - \frac{\lambda \pi }{2}c_{2} = \frac{\pi }{2}\\ 
+		      		      	\frac{\lambda \pi }{2}c_{1} + c_{2} = 0.
+		      		      	\end{matrix}\right.
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      
+		      		      Retinem faptul ca, determinantul acestui sistem este pozitiv pentru toate \(\lambda \in \mathbb{R}\), deci exista o solutie unica \(\left ( c_{1} , c_{2}\right )\) care ofera solytia ecuatiei integrale date 
+		      		      \begin{displaymath}
+		      		      	x\left ( t \right ) = \frac{2\left ( 2\cos t+ \lambda\pi\sin t \right )}{4 + \lambda^{2}\pi^{2}}. 
+		      		      \end{displaymath}
+		      		      		      		      		      		      		      		      
+		      		\item Avem \(x\left ( t \right ) = t + \lambda c \sin t, unde c = \int_{0}^{2\pi}\left | \pi - s \right |\cdot x\left ( s \right ) \ ds\). Inlocuind \(x\left ( t \right )\) dat de prima relatia in cea de a doua, rezulta 
+		      		      \(c = \int_{0}^{2\pi} \left | \pi - s \right | \cdot \left ( s+ \lambda c\sin s \right ) \ ds \Leftrightarrow c\left ( 1- 2\lambda \pi \right ) = \pi^{3}.\)
+		      		      Prin urmare daca \(\lambda = \frac{1}{2\pi}\) ecuatia integral ata nu are solutie, altfel, ecuatia are solutia
+		      		      \(x\left ( t \right ) = t + \frac{\lambda \pi ^{3}}{1 - 2 \lambda \pi}\sin t\).
+		      		      		      		      		      		      		      		     
+		      		\item Avem 
+		      		      \begin{displaymath}
+		      		      	x\left ( t \right ) = f \left ( t \right ) + \lambda c_{1} - 3 \lambda c_{2}t, (*)
+		      		      \end{displaymath}
+		      		      		      		      		      		      
+		      		      unde 
+		      		      \begin{displaymath}
+		      		      	c_{1} = \int_{0}^{t} x\left ( s \right ) \ ds,c_{2} = \int_{0}^{t} sx\left ( s \right ) \ ds..
+		      		      \end{displaymath}
+		      		      		      		      		      		      
+		      		      Astfel avem sistemul
+		      		      \begin{displaymath}
+		      		      	\left\{\begin{matrix}
+		      		      	c_{1} = \int_{0}^{1} \left [ f\left ( s \right ) + \lambda c_{1} - 3\lambda c_{2}s \right ]\ ds,\\ 
+		      		      	c_{2} = \int_{0}^{1}s \left [ f\left ( s \right ) + \lambda c_{1} - 3\lambda c_{2}s \right ]\ ds,
+		      		      	\end{matrix}\right.
+		      		      \end{displaymath}
+		      		      		      		      		      		      
+		      		      sau
+		      		      		      		      		      		      
+		      		      \begin{displaymath}
+		      		      	\left\{\begin{matrix}
+		      		      	\left ( 1 - \lambda  \right )c_{1} + \frac{3}{2}\lambda c_{2} = \int_{0}^{1}f\left ( s \right ) \ ds,\\ 
+		      		      	-\frac{1}{2}c_{1} + \left ( 1 + \lambda  \right )c_{2} = \int_{0}^{1}s f\left ( s \right ) ds.
+		      		      	\end{matrix}\right.
+		      		      \end{displaymath}
+		      		      		      		      		      		      
+		      		      Determinantul acestui sistem algebraic este \(\Delta  =  \frac{4 - \lambda ^{2} }{4}\). Deci, pentru fiecare \(\lambda \in \mathbb{R} \ \left \{ -2,+2 \right \}, c_{1}, c_{2}\) pot fi determinate in mod unic si solutia ecuatiei integrale poate fi exprimata explicit folosind formaula (*). 
+		      		      Daca \(\lambda = -2\) sistemul algebraic de mai sus are solutii daca si numai daca 
+		      		      \begin{displaymath}
+		      		      	\int_{0}^{1}f\left ( s \right ) \ ds  = 3\int_{0}^{1}sf\left ( s  \right )\ ds (**)
+		      		      \end{displaymath}
+		      		      		      		      		      		      
+		      		      Si in acest caz, exista o infinitate de solutii ale ecuatiei integrale date, si anume , 
+		      		      \begin{displaymath}
+		      		      	x\left ( t \right ) = f\left ( t \right ) + 2c_{1}\left ( 3t-1 \right ) - 2t\int_{0}^{1}f\left ( s \right ) \ ds, c_{1 }\in \mathbb{R}. 
+		      		      \end{displaymath}
+		      		      		      		      		      		      
+		      		      Un exemplu de fucntie care satisfice conditia (**) de mai sus este \(f\left ( t  \right ) = t-1.\)
+		      		      Daca conditia (**) nu este indeplinita, atunci ecuatia integral data nu are solutie. 
+		      		      Daca \(\lambda = +2\) conditia de compatibilitate pentru sistemul algebric de mai sus este 
+		      		      \(\int_{0}^{1}f\left ( s \right ) \ ds = \int_{0}^{1}sf\left ( s \right ) \ ds\)
+		      		      si, daca aceasta conditie este indeplinita (de exemplu,  \(f\left ( 3t  \right ) = t-1)\), avem din nou o infinitate de solutii pentru ecuatia integral data, 
+		      		      \begin{displaymath}
+		      		      	x\left ( t \right ) = f\left ( t \right ) + 2c_{1}\left ( 1-t \right ) -2t\int_{0}^{1}f\left ( s \right ) \ ds, c_{1} \in \mathbb{R}. 
+		      		      \end{displaymath}
+		      		      		      		      		      		      
+		      		      In caz contrar, ecuatia integral data nu are solutie. 
+		      		      		      		      		      		      		      		      
+		      	\end{enumerate}     	
+		      			      			      			      	
+		      	\item Se considera , in \(\mathbb{K}\) , urmatoarea ecuatie Fredholm cu nucleu degenerate (separabil):
+		      	\begin{displaymath}
+		      		x\left (  t\right ) = f\left ( t \right ) + \lambda \int_{a}^{b} \left [ \sum_{i = 1}^{n}a_{i}\left ( t \right )b_{i}\left ( s \right ) \right ]x\left ( s \right ) \ ds , ( F)
+		      	\end{displaymath}
+		      			      			      	
+		      	unde \(\lambda \in \mathbb{K} , f, a_{i}, b_{i} \in L^{2} \left ( a,b ; \mathbb{K} \right ), i = 1,2,....,n.\) Se poate presupune fara nicio pierdere a generalitatii ca sistemele \(\left \{ a_{1},......,a_{n} \right \}, \left \{ b_{1},......,b_{n} \right \}\) sunt linear independente . Obtinand 
+		      	\begin{displaymath}
+		      		c_{i} = \int_{a}^{b} b_{i}\left ( s \right )x\left ( s \right )\ ds, i - 1,....,n, (1)
+		      	\end{displaymath}
+		      			      			      	
+		      	obtinem din \((F) \)
+		      	\begin{displaymath}
+		      		x\left ( t \right ) = f\left ( t \right ) + \lambda \sum_{i=1}^{n}c_{i}a_{i}\left ( t \right ). (2)
+		      	\end{displaymath}
+		      			      			      	
+		      	Introducand (2) in (1) obtinem sistemul algebraic 
+		      	\begin{displaymath}
+		      		c_{i} = f_{i} + \lambda \sum_{k = 1}^{n}k_{ij}c_{j}, i = 1,......,n , (3) 
+		      	\end{displaymath}
+		      			      			      	
+		      	unde
+		      	\begin{displaymath}
+		      		f_{i} = \int_{a}^{b} b_{i}\left ( s \right )f\left ( s \right )ds , k_{ij} = \int_{a}^{b}b_{i}\left ( s \right )a_{j}\left ( s \right )ds, i,i = 1,....,n.
+		      	\end{displaymath}
+		      			      			      	
+		      	aratati ca alternative Fredholm pentru ecuatia (F) poate fi exprimata ca o alternative echivalenta pentru sistemul algebraic (3). 
+		      			      			      	
+		      	Rezulta ca 
+		      	\begin{displaymath}
+		      		c = \begin{bmatrix}
+		      		c_{1}\\ 
+		      		\vdots \\ 
+		      		c_{n}
+		      		\end{bmatrix}, 
+		      		g = \begin{bmatrix}
+		      		f_{1}\\ 
+		      		\vdots \\ 
+		      		f_{n}
+		      		\end{bmatrix},
+		      		K = \left ( k_{ij} \right )_{1\leq i,j\leq n}.
+		      	\end{displaymath}
+		      			      			      	 
+		      	Deci (3) poate fi scris ca:
+		      	\begin{displaymath}
+		      		\left ( I - \lambda K \right )c = g. (3 ')
+		      	\end{displaymath}
+		      			      			      	
+		      	Exista o corespondenta bijective intre multimile (F) si (3 ').
+		      	Urmatoarea alternative pentru ecuatia (3 ') este bine cunoscuta:
+		      	j) daca \(\det \left ( I - \lambda K  \right ) \neq 0\), atunci exista o solutie unica a lui (3 ') data de , \(c = \left ( I - \lambda K \right )^{-1}g\),
+		      	care da Solutia lui (F) prin intermedul lu (2);
+		      	jj) in caz contrat , \(\ det \left ( I - \lambda K  \right ) = 0\), si ecuatia (3 ') are solutii \(\Leftrightarrow g\) este perpendicular pe \(N\left ( I - \overline{\lambda} K^{\ast } \right ) = N\left ( I - \overline{\lambda} \overline{K}^{T} \right )\), astfel ecuatia (F) are o infinitate de solutii, 
+		      	\begin{displaymath}
+		      		x \left ( t \right ) = x_{p}\left ( t \right ) + \sum_{i = 1}^{m}\alpha _{i}x_{i}\left ( t \right ), 
+		      	\end{displaymath}
+		      	unde \(= x_{p}\) este o solutie articulara a lui (F), \(\alpha _{1},....,\alpha _{m} \in \mathbb{K} si x _{1},....,x _{m}\), sunt solutii independente ale ecuatiei integrale omogene 9 care pot fi calculate explicit). 
+		      			      			      			      			      	    
+		      			      			      			      			      	    
+		      	\item Fie \(\left ( H, \left ( \cdot ,\cdot  \right ), \left \| \cdot  \right \| \right )\) un spatiu Hilbert si fie \(\left \{ e_{1},...., e_{m} \right \} \subset H\) un sistem ortonormal , unde \(m\) este un numar natural dat. Definiti \(A : H \rightarrow H\) prin 
+		      	\begin{displaymath}
+		      		Ax = \sum_{k = 1 }^{m} k\left ( x,e_{k} \right )e_{k}, x \in H. 
+		      	\end{displaymath}
+		      			      			      	
+		      	Rezolvati ecuatia abstracta a lui Fredholm 
+		      	\begin{displaymath}
+		      		x = f + \lambda Ax, 
+		      	\end{displaymath}
+		      			      			      	
+		      	unde \(f\in H si \lambda \in \mathbb{K}\). 
+		      			      			      	
+		      	Daca \(\lambda = 0\) , atunci exista o solutie unica \(x = f\). De acum, vom considera \(\lambda \in \mathbb{K} - \left \{ 0 \right \}\). Notam \(H _{m} = \ Span \left ( \left \{ e_{1},...,e_{m} \right \} \right )\). Din Solutia exercitiului 8.9, stim ca A este simetric (deci valorile sale proprii sunt numere reale), \(R\left ( A \right ) = H_{m}\) si  \(N\left ( A \right ) = H_{m}^{\perp }\). De fapt, este usor de observant ca valorle proprii ale lui \(A\) sunt \(\mu _{k} = k, k = 1,....,m , cu e_{1},...,e_{m}\) ca vectori proprii corespunzatroi. 
+		      	Distingem doua cazuri:
+		      	Cazul 1.
+		      	\(\dim H = m, de exemplu, H = H_{m}\). Atunci ecuatia Fredholm data este un sistem algebric simplu, \(\left ( I - \lambda A \right )x = f\). (1)
+		      	Daca \(\lambda \in \mathbb{K} - \left \{ 1,\frac{1}{2},...,\frac{1}{m} \right \}\), atunci (1) are solutie unica 
+		      	\begin{displaymath}
+		      		x - \sum_{k = 1}^{m}\frac{\left ( f,e_{k} \right )}{1 - \lambda k}e_{k}. 
+		      	\end{displaymath}
+		      			      			      	
+		      	Daca \(\lambda  = \frac{1}{j}\) pentru unii \(j \in \left \{ 1,...,m \right \},\) atunci sistemul (1) este rezolvabil daca si numai daca \(\left ( f,e_{j} \right ) = 0\). In aceasta situatie, exista o infinitate de solutii \(x\) cu coordonatele \(x_{k} = \frac{j\left ( f,e_{k} \right )}{j-k }, k\neq j,iar x_{j} \in \mathbb{K}\) este arbitrar. 
+		      	Cazul 2.
+		      	\(\dim H > m\). Desigur, \(H = H_{m}\oplus H_{m}^{\perp }\), cu  \(H_{m}^{\perp }\neq \left \{ 0 \right \}\). Cautam \(x\) de forma \(x = x_{1} + x_{2}, x_{1} \in H_{m}, x_{2} \in H_{m}^{\perp }\). Folosind o descompunere similara pentru \(f\), adica \(f = f_{1} + f_{2}, f_{1} \in H_{m}, f_{2} \in H_{m}^{\perp }\), derivam din (1) ca \(x_{2} = f_{2}\) si \(\left ( I - \lambda A \right )x _{1} = f_{1}\). Folosind aceeasi discutie ca mai inainte, putem gasi \(x_{1}\), atunci cand exista, deci concluzionam ca \(x = x_{1} + f_{2}\). 
+		      			      			      	
+		      	\item Se considera functiile 
+		      	\begin{displaymath}
+		      		u_{n}\left ( t \right ) = \sqrt{2} \cos \left ( \left ( n+ \frac{1}{2} \right )\pi t \right ), t \in\left [ 0,1 \right ], n = 0,1,2,...
+		      	\end{displaymath}
+		      			      			      	
+		      	Este bine cunoscut faptul ca sistemul \(\left \{ u_{n} \right \}_{n=0}^{\infty }\) este o baza ortonormala in \(H  = L^{2} \left ( 0,1 \right )\) echipata cu produsul scalar obisnuit si norma (vezi ex 8.11). Definit de nucleul \(k\left ( t,s \right )\) prin 
+		      	\(k\left ( t,s \right ) = \sum_{n=m}^{\infty } \frac{1}{\left ( n+1 \right )^{2}}u_{n}\left ( t \right )u_{n}\left ( s \right ), t,s \in \left [ 0,1 \right ]\), 
+		      	unde \(m \in \left \{ 0,1,2,.... \right \}\), si de operatorul integral \(A : H \rightarrow H\), 
+		      	\begin{displaymath}
+		      		\left ( Ag \right )\left ( t \right ) = \int_{0}^{1} k\left ( t,s \right )g\left ( s \right )ds, g \in H. 
+		      	\end{displaymath}
+		      			      			      	
+		      	Discutati existent ecuatiei Fredholm
+		      	\(x = f + \lambda Ax, f \in H, \lambda \in \mathbb{R},\)
+		      	in doua cazuri: \(m = 0 si m \geq 1\). 
+		      			      			      	
+		      	Din M-testul Weierstrass, avem 
+		      	\begin{displaymath}
+		      		k \in C\left ( \overline{Q} \right ) \subset L^{2}\left ( Q \right ), Q = \left ( 0,1 \right )\times \left ( 0,1 \right ).
+		      	\end{displaymath}
+		      			      			      	
+		      	Evident, A este auto-adjunct si compact. 
+		      	Cazul \(m = 0\)
+		      	In acest caz, \(N\left ( A \right ) = \left \{ 0 \right \}\). Intr-adevar , \(Ag = 0\) implica 
+		      	\begin{displaymath}
+		      		0 = \left ( Ag,g \right )_{L^{2}} = \sum_{n= 1}^{\infty }\frac{1}{\left ( n+1^{2} \right )}\left ( g , u_{n} \right )_{L^{2}}^{2},
+		      	\end{displaymath}
+		      			      			      	 
+		      	prin urmare, 
+		      	\begin{displaymath}
+		      		\left ( g,u_{n} \right )_{L^{2}} = 0, \forall n \in \left \{ 0,1,2,.... \right \}\Rightarrow g = 0, 
+		      	\end{displaymath}
+		      			      			      	
+		      	intrucat sistemul \(\left \{ u_{n} \right \}_{n=0}^{\infty }\) este o baza in \(H = L^{2}\left ( 0,1 \right )\). Pentru a determina perechile proprii ale lui \(A\) luam in considerare ecuatia 
+		      	\(Ag = \mu g\) care poate fi scrisa ca 
+		      	\begin{displaymath}
+		      		\sum_{n = 0}^{\infty }\frac{\left ( g, u_{n} \right )_{L^{2}}}{\left ( n+1 \right )^{2}}u_{n} = \mu \sum_{n = 0}^{\infty }\left ( g, u_{n} \right )_{L^{2}}u_{n}, 
+		      	\end{displaymath}
+		      			      			      	
+		      	Unde am folosit expansiunea Fourier a lui \(g\). Deoarece \(\left \{ u_{n} \right \}_{n = 0}^{\infty }\) este o baza in \(H\) , avem 
+		      	\begin{displaymath}
+		      		\left ( \mu  - \frac{1}{\left ( n+1 \right )^{2}} \right )\left ( g,u_{n} \right )_{L^{2}} = 0, n = 0,1,2,... (*)
+		      	\end{displaymath}
+		      			      			      	
+		      	Daca \(\mu \neq \frac{1}{\left ( n+1 \right )^{2}}\), pentru orice \(n\in \left \{ 0,1,2,... \right \}\)  atunci 
+		      	\begin{displaymath}
+		      		\left ( g,u_{n} \right )_{L^{2}} = 0, \forall n\in \left \{ 0,1,2,... \right \}\Rightarrow g = 0,
+		      	\end{displaymath}
+		      			      			      	
+		      	prin urmare, astfel de  \(\mu\)  -uri nu sunt valori proprii ale lui \(A\). Pentru \(\mu   = \mu _{n} = \frac{1}{\left ( n+1 \right )^{2}}\) avem de la \((*) \)
+		      	\begin{displaymath}
+		      		\left ( g,u_{k} \right )_{L^{2}} = 0, \forall k\in \mathbb{N}, k\neq n,
+		      	\end{displaymath}
+		      			      			      	 
+		      	deci functiile proprii corespunzatoare lui  \(\mu   = \mu _{n} = \frac{1}{\left ( n+1 \right )^{2}}\) sunt multipli diferiti de zero ai lui \(u_{n}\). 
+		      	Conform formulei Scgmidt pe care o avem pentru \(\lambda \in \mathbb{R}- \left \{ 1,2^{2},3^{2}.... \right \}\) si pentru \(t \in \left ( 0,1 \right )\), 
+		      	\begin{displaymath}
+		      		x\left ( t \right ) = f\left ( t \right ) + 2\lambda\sum_{k=0}^{\infty }\frac{\int_{0}^{1}f\left ( s \right )\ cos\left ( \left ( k+\frac{1}{2} \right )\pi s \right ) \ ds}{\left ( k+1 \right )^{2} -\lambda } \times \cos \left ( \left ( k+\frac{1}{2} \right )\pi t \right ) +
+		      	\end{displaymath}
+		      			      	
+		      	\begin{displaymath}
+		      		+ \alpha  \cos \left ( \left ( n + \frac{1}{2} \right )\pi t \right ), \alpha \in \mathbb{R}.
+		      	\end{displaymath}
+		      	
+		      			      			      	 
+		      			      			      	
+		      	Cazul \(m\geq 1\)
+		      	In acest caz \(Y_{0} := N\left ( A \right ) = \ Span\left ( \left \{ u_{0},u_{1},....,u_{m-1} \right \} \right )\) si \(H = Y_{0} \oplus Y_{1}\), unde  \(Y_{1} = N\left ( A \right )^{\perp } = \ Span \left ( \left \{ u_{m}, u_{m+1},.. \right \} \right )\).
+		      	Notam cu \(A_{1}\) restrictia lui \(A\) la \(Y_{1}\) care este un spatiu Hilbert in raport cu produsul scalar si norma lui \(H  = L^{2}\left ( 0,1 \right )\). Evident, \(A_{1}\) il mapeaza pe \(Y_{1}\), fiind compact, autoadjunct, cu \(N\left ( A_{1} \right ) = \left \{ 0 \right \}\), si cu valori proprii \(\mu _{n} = \frac{1}{\left ( n+1 \right )^{2}}\) si functii proprii \(u_{n}, n\geq m+1\). De fapt, \(Y_{1}\) si \(A_{1}\) joaca rolurile lui \(H\) si \(A\) pe care le-am vazut inainte. 
+		      	Ecuatia 
+		      	\begin{displaymath}
+		      		x = f + \lambda Ax
+		      	\end{displaymath}
+		      			      			      	
+		      	poate fi scrisa ca
+		      	\begin{displaymath}
+		      		x_{0} + x_{1} = f_{0} + f_{1} + \lambda Ax_{1},
+		      	\end{displaymath}
+		      			      			      	
+		      	unde \(x_{0} ,f_{0} \in Y_{0}\) si \(x_{1} ,f_{1} \in Y_{1}\), deci \(x_{0} = f_{0}\) si
+		      	\(x_{1} = f_{1} + \lambda A_{1}x_{1},.(**)\)
+		      			      			      	
+		      	Pe baza argumentelor de mai sus, avem
+		      	Daca \(\lambda \neq \left ( n+1 \right )^{2}\) pentru orice \(n\geq m\) atunci
+		      	\begin{displaymath}
+		      		x\left ( t \right ) = f_{0}\left ( t \right ) + x_{1}\left ( t \right ) = f\left ( t \right ) + 2 \lambda \sum_{k=m}^{\infty }\frac{\int_{0}^{1}f_{1\left ( s \right ) \ cos\left ( \frac{k+1}{2} \right )\pi s }\ ds}{\left ( k+1 \right )^{2} - \lambda }\times \ cos \left ( \frac{k+1}{2}\pi t \right ),
+		      	\end{displaymath}
+		      			      			      	 
+		      	si 
+		      	Daca \(\lambda = \left ( n+1 \right )^{2}\), pentru unii \(n\geq m\), atucni ecuatia Fredholm (**) are solutii daca si numai daca \(f_{1} \perp u_{n} \Leftrightarrow f \perp u_{n}\), iar in acest caz 
+		      	\begin{displaymath}
+		      		x\left ( t \right ) = f\left ( t \right ) + \left ( 2n+1 \right )^{2} \times \sum_{k\geq m,k\neq n}\frac{\int_{0}^{1}f_{1}\left ( s \right ) \ cos \left ( \frac{k+1}{2} \right ) \pi s \ ds}{\left ( k+1 \right )^{2} - \lambda } \times  \ cos \left ( \frac{k+1}{2}\ \pi t  \right ) +
+		      	\end{displaymath}
+		      			      			      	
+		      	\begin{displaymath}
+		      		+ \alpha  \cos \left ( \frac{n+1}{2} \pi t \right ), \alpha \in \mathbb{R}. 
+		      	\end{displaymath}
+		      			      	
+		      			      			      	
+		      			      			      			      			      	    
+		      	\end{enumerate}
+		      			      			      			      		    	
+		      	\bibliographystyle{unsrt}
+		      	\setlength{\baselineskip}{\normalbaselineskip}
+		      	\setlength{\parskip}{0pt}
+		      	\bibliography{refs}
 \end{document}
