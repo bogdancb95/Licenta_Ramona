@@ -251,7 +251,38 @@
 \renewcommand{\maketitle}{%
   \newpage
   \begin{minipage}{0.48\textwidth} \begin{flushleft}
-\includegraphics[width=0.4\textwidth]{sigla.png}
+\includegraphics[width=0.4\textwidth]{sigla.PNG}
+\end{flushleft}\end{minipage}
+\begin{minipage}{0.22\textwidth}
+  \centerline{\large Ministerul Educa\c tiei }
+  \centerline{\large Universitatea "OVIDIUS" Constan\c ta}
+  \centerline{\large Facultatea de \@facultatea}
+  \centerline{\large Specializarea \@specializarea}
+\end{minipage}
+
+    \thispagestyle{empty}
+  \vspace*{\stretch{2}}
+  \noindent\begin{minipage}{\textwidth}
+    \vskip 4mm
+    {\Large \centerline{\Huge Lucrare de \@teza}}\vskip 2mm
+  \vspace{2cm}
+  \leftline{\large \ifdef{\@coordonatorSecundar}{Coordonatori \c stiin\c tifici:}{Coordonator \c stiin\c tific:}}\vskip 2mm
+  \leftline{\Large \ifdef{\@gradDidacticCP}{\@gradDidacticCP}{}~\@coordonatorPrincipal}\vskip 2mm
+  \leftline{\Large \ifdef{\@gradDidacticCS}{\@gradDidacticCS}{}~\ifdef{\@coordonatorSecundar}{\@coordonatorSecundar}{}}
+  \vspace{2cm}
+  \rightline{\large Student:}\vskip 2mm
+  \rightline{\Large \@autor}
+  \end{minipage}
+  \vspace*{\stretch{3}}
+  \par\centerline{\normalsize ~Constan\c ta~}
+  \par\centerline{\normalsize ~\@data~}
+  \newpage\pagestyle{PageNormale}
+  
+  
+  
+  \newpage
+  \begin{minipage}{0.48\textwidth} \begin{flushleft}
+\includegraphics[width=0.4\textwidth]{sigla.PNG}
 \end{flushleft}\end{minipage}
 \begin{minipage}{0.22\textwidth}
   \centerline{\large Ministerul Educa\c tiei }
@@ -265,19 +296,20 @@
   \noindent\begin{minipage}{\textwidth}
       \center{\Huge \@titlu}%\centerline
     \vskip 4mm
-    {\Large \centerline{Lucrare de \@teza}}\vskip 2mm
   \vspace{2cm}
   \leftline{\large \ifdef{\@coordonatorSecundar}{Coordonatori \c stiin\c tifici:}{Coordonator \c stiin\c tific:}}\vskip 2mm
   \leftline{\Large \ifdef{\@gradDidacticCP}{\@gradDidacticCP}{}~\@coordonatorPrincipal}\vskip 2mm
   \leftline{\Large \ifdef{\@gradDidacticCS}{\@gradDidacticCS}{}~\ifdef{\@coordonatorSecundar}{\@coordonatorSecundar}{}}
   \vspace{2cm}
-  \rightline{\large Absolvent:}\vskip 2mm
+  \rightline{\large Student:}\vskip 2mm
   \rightline{\Large \@autor}
   \end{minipage}
   \vspace*{\stretch{3}}
   \par\centerline{\normalsize ~Constan\c ta~}
   \par\centerline{\normalsize ~\@data~}
   \newpage\pagestyle{PageNormale}
+  
+  
   }
 
 %---------------- Paragraphes ----------------
