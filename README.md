@@ -1,2 +1,0 @@
-# latex
-Ramona Latex

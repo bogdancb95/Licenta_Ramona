@@ -25,7 +25,7 @@
 \renewcommand\partname{Partea}
 \renewcommand\chaptername{Capitolul}
 \renewcommand\appendixname{Anexe}
-\renewcommand\abstractname{Rezumat}
+\renewcommand\abstractname{Abstract}
 \renewcommand\today{\number\day\space
                     \ifcase\month\or Ianuarie\or Februarie\or Martie\or
                                      Aprilie\or Mai\or Iunie\or
@@ -251,7 +251,7 @@
 \renewcommand{\maketitle}{%
   \newpage
   \begin{minipage}{0.48\textwidth} \begin{flushleft}
-\includegraphics[width=0.4\textwidth]{sigla.PNG}
+\includegraphics[width=0.4\textwidth]{sigla.png}
 \end{flushleft}\end{minipage}
 \begin{minipage}{0.22\textwidth}
   \centerline{\large Ministerul Educa\c tiei }
@@ -265,13 +265,13 @@
   \noindent\begin{minipage}{\textwidth}
       \center{\Huge \@titlu}%\centerline
     \vskip 4mm
-    %{\Large \centerline{Lucrare de \@teza}}\vskip 2mm
+    {\Large \centerline{Lucrare de \@teza}}\vskip 2mm
   \vspace{2cm}
   \leftline{\large \ifdef{\@coordonatorSecundar}{Coordonatori \c stiin\c tifici:}{Coordonator \c stiin\c tific:}}\vskip 2mm
   \leftline{\Large \ifdef{\@gradDidacticCP}{\@gradDidacticCP}{}~\@coordonatorPrincipal}\vskip 2mm
   \leftline{\Large \ifdef{\@gradDidacticCS}{\@gradDidacticCS}{}~\ifdef{\@coordonatorSecundar}{\@coordonatorSecundar}{}}
   \vspace{2cm}
-  \rightline{\large Student:}\vskip 2mm
+  \rightline{\large Absolvent:}\vskip 2mm
   \rightline{\Large \@autor}
   \end{minipage}
   \vspace*{\stretch{3}}
