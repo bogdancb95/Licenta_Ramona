@@ -47,27 +47,44 @@
 
 \chapter*{Abstract}
 
-\^{I}n aceast\u{a} lucrare voi prezenta ecua\c{t}iile integrale Volterra \c{s}i Fredholm. \^{I}n matematic\u{a} , ecua\c{t}iile integrale Volterra sunt un tip special de ecua\c{t}ii integrale .Ele sunt \^{i}mp\u{a}r\c{t}ite \^{i}n dou\u{a} grupuri, denumite primul \c{s}i al doilea fel.\^{I}n teoria operatorilor \c{s}i \^{i}n teoria Fredholm , operatorii corespunz\u{a}tori sunt numi\c{t}i operatori Volterra . 
+Aceast\u{a} lucrare este dedicat\u{a} studiului a dou\u{a} cele mai importante clase de ecua\c{t}ii integrale, mai exact, ecua\c{t}iile Volterra de prima \c{s}i de a doua spe\c{t}\u{a} \c{s}i ecua\c{t}iile integrale de tip Fredholm de spe\c{t}a a doua. 
 
-\^{I}n matematic\u{a} , teoria Fredholm este o teorie a ecua\c{t}iilor integrale . \^{I}n sensul cel mai restr\^{a}ns, teoria Fredholm se preocup\u{a} de solu\c{t}ia ecua\c{t}iei integrale Fredholm . \^{I}ntr-un sens mai larg, structura abstract\u{a} a teoriei lui Fredholm este dat\u{a} \^{i}n termenii teoriei spectrale a operatorilor Fredholm \c{s}i a nucleelor Fredholm pe spa\c{t}iul Hilbert .
+Ecua\c{t}iile integrale sunt str\^{a}ns legate de multe arii ale matematicii. Primele dintre acestea ar fi ecua\c{t}iile diferen\c{t}iale \c{s}i teoria operatorilor. Multe probleme din teoria ecua\c{t}iilor diferen\c{t}iale ordinare sau cu derivate par\c{t}iale pot fi scrise echivalent sub forma unor ecua\c{t}ii integrale. \^{I}n particular, rezultate de existen\c{t}\u{a} \c{s}i unicitate pentru acestea pot fi astfel ob\c{t}inute din rezultatele corespunz\u{a}toare pentru ecua\c{t}ii integrale. 
 
-The aim of this paper is to present the integral equations Volterra and Fredholm.In mathematics, Volterra integral equations are a special type of integral equation. They are divided into two groups, called the first and second kind. In operator theory and Fredholm theory, the corresponding operators are called Volterra operators. 
+Principiul Contrac\c{t}iilor (al lui Banach), Teorema Hilbert-Schmidt \c{s}i Alternativa lui Fredholm sunt instrumentele teoretice fundamentale pe care le-am utilizat pentru a ob\c{t}ine rezultate importante privind existen\c{t}a (sau nonexisten\c{t}a) \c{s}i unicitatea solu\c{t}iilor ecua\c{t}iilor integrale de tip Volterra \c{s}i Fredholm. \^{I}n plus, \^{i}n a doua parte a lucr\u{a}rii am dat c\^{a}teva aplica\c{t}ii ale rezultatelor teoretice
+prezentate \^{i}n prima parte.
 
-In mathematics, Fredholm theory is a theory of integral equations. In the narrowest sense, Fredholm's theory deals with the solution of the Fredholm integral equation. In a broader sense, the abstract structure of Fredholm's theory is given in terms of the spectral theory of Fredholm operators and Fredholm nuclei on the Hilbert space.
+This work is dedicated to the study of two important classes of integral equations, namely Volterra and second kind Fredholm integral equations.
+
+Integral equations have applications in many areas
+of mathematics. Foremost among these are  differential equations and operator
+theory. Many problems in the fields of ordinary and partial differential
+equations can be rewritten as integral equations. In particular, existence and uniqueness
+results can then be derived from the corresponding results from integral
+equations. 
+
+The Banach Contraction Principle, Hilbert-Schmidt Theorem and Fredholm Alternative are the fundamental tools that we used in order to obtain important results regarding the existence (or nonexistence) and uniqueness of the solutions of Volterra and Fredholm integral equations. In addition, in the second part of this work we give some applications of the theoretical results presented in the first part.
+
 
 \chapter*{Introducere}
 
-Teoria ecua\c{t}iilor integrale reprezint\u{a} un capitol important \^{i}n matematica aplicat\u{a}. Primele lucr\u{a}ri, av\^{a}nd ca tematic\u{a} ecua\c{t}iile integrale, au ap\u{a}rut \^{i}n secolul 19 ¸\c{s}i la \^{i}nceputul secolului 20, av\^{a}nd ca autori matematicieni renumi\c{t}i ca Niels Abel, Augustin Cauchy , Edouard Goursat , Maxime Bocher, David Hilbert , Vito Volterra ,Ivar Fredholm , Emile Picard , Traian Lalescu.
+Teoria ecua\c{t}iilor integrale reprezint\u{a} un capitol important \^{i}n matematica aplicat\u{a}. Primele lucr\u{a}ri  av\^{a}nd ca tematic\u{a} ecua\c{t}iile integrale  au ap\u{a}rut \^{i}n secolul al XIX-lea \c{s}i la \^{i}nceputul secolului al XX-lea av\^{a}nd ca autori matematicieni renumi\c{t}i precum Niels Abel, Augustin Cauchy, Edouard Goursat, Maxime Bocher, David Hilbert, Vito Volterra, Ivar Fredholm, Emile Picard, Traian Lalescu. 
 
-Lucrarea este structurat\u{a} \^{i}n 3 capitole. 
+Multe probleme din fizica matematic\u{a} pot fi enun\c{t}ate sub forma unor
+ecua\c{t}ii integrale. Este aproape imposibil s\u{a} faci o list\u{a} cu toate aplica\c{t}iile acestora.
+Este suficient s\u{a} spunem c\u{a} nu exist\u{a} aproape nicio zon\u{a} a matematicii aplicate \c{s}i a
+fizicii matematice \^{i}n care ecua\c{t}iile integrale s\u{a} nu apar\u{a}.
+Este de asemenea bine cunoscut faptul c\u{a}, teoria ecua\c{t}iilor diferen\c{t}iale este str\^{a}ns legat\u{a} de cea a ecua\c{t}iilor integrale. Putem aminti aici celebrul rezultat de existen\c{t}\u{a} \c{s}i unicitate local\u{a} a lui Picard pentru problema Cauchy asociat\u{a} unui sistem de ecua\c{t}ii diferen\c{t}iale ordinare a c\u{a}rui demonstra\c{t}ie se ob\c{t}ine scriind aceast\u{a} problem\u{a} Cauchy ca o ecua\c{t}ie integral\u{a}. Astfel de exemple se reg\u{a}sesc \c{s}i \^{i}n studiul ecua\c{t}iilor cu derivate par\c{t}iale. O alt\u{a} arie a matematicii care se \^{i}ntrep\u{a}trunde cu studiul ecua\c{t}iilor integrale este \c{s}i teoria operatorilor.
 
-Primul capitol este unul introductiv \^{i}n care sunt prezentate no\c{t}iunile \c{s}i teoremele de baz\u{a} ce vor fi aplicate sau generalizate pe parcursul celorlalte capitole \c{s}i anume: Principiul contrac\c{t}iei al lui Banach, Operatorii liniari \c{s}i compac\c{t}i precum \c{s}i Cazul operatorilor compac\c{t}i, Principalele rezultate \c{s}i aproxim\u{a}rile identit\u{a}\c{t}ii Friedrichs.
+Aceast\u{a} lucrare este dedicat\u{a} studiului a dou\u{a} cele mai importante clase de ecua\c{t}ii integrale, mai exact, ecua\c{t}iile Volterra de prima \c{s}i de a doua spe\c{t}\u{a} \c{s}i ecua\c{t}iile integrale de tip Fredholm de spe\c{t}a a doua.
+Lucrarea este structurat\u{a} \^{i}n 3 capitole.
 
-Cel de al doilea capitol, cuprinde ecua\c{t}iile integrale de tip Volterra \c{s}i Fredholm. \^{I}n ecua\c{t}iile Volterra, limita superioar\u{a} de integrare este variabila x, \^{i}n timp ce \^{i}n ecua\c{t}iile Fredholm, limita superioar\u{a} de integrare este o constant\u{a} fix\u{a} . A\c{s}a-numitele ecua\c{t}ii de primul fel implic\u{a} doar func\c{t}ia necunoscut\u{a} \(\varphi \) \^{i}n interiorul integralei.
+Primul capitol este unul introductiv \^{i}n care sunt prezentate no\c{t}iunile \c{s}i teoremele de baz\u{a} ce vor fi aplicate  pe parcursul celorlalte capitole \c{s}i dintre care amintim principiul contrac\c{t}iilor al lui Banach, operatorii liniari \c{s}i compac\c{t}i precum \c{s}i  teorema Hilbert Schmidt.
 
-Printre cele mai importante aspecte abordate, putem aminti: Teorema de existen\c{t}\u{a} \c{s}i unicitate pentru care am prezentat trei demonstra\c{t}ii diferite, Alternativa lui Fredholm, Nucleul rezolvent \c{s}i Cazul nucleelor hermitiene.
+Al doilea capitol cuprinde rezultate teoretice privind existen\c{t}a \c{s}i unicitatea solu\c{t}iilor ecua\c{t}iilor integrale de tip Volterra \c{s}i Fredholm. Investigarea celor dou\u{a} tipuri de ecua\c{t}ii este diferit\u{a}, necesit\^{a}nd abord\u{a}ri diferite. \^{I}n cazul ecua\c{t}iilor de tip Volterra, limita superioar\u{a} de integrare este variabil\u{a}, \^{i}n timp ce \^{i}n ecua\c{t}iile Fredholm, domeniul pe care se integreaz\u{a} este fix. Pentru ecua\c{t}iile de tip Volterra, am utilizat tehnica de punct fix (principiul contrac\c{t}iilor al lui Banach), \^{i}n timp ce pentru ecua\c{t}iile de tip Fredholm, instrumentele utilizate au fost Alternativa lui Fredholm \c{s}i Teorema Hilbert-Schmidt.
+Printre cele mai importante aspecte abordate, putem aminti: teorema de existen\c{t}\u{a} \c{s}i unicitate a solu\c{t}iei pentru ecua\c{t}iile Volterra la care am prezentat trei demonstra\c{t}ii diferite, nucleul rezolvent \c{s}i cazul nucleelor hermitiene. Preciz\u{a}m c\u{a} am studiat \c{s}i cazul \^{i}n care aceste ecua\c{t}ii integrale sunt neliniare.
 
-Cel de al treilea capitol prezint\u{a} aplica\c{t}ii ale ecua\c{t}iilor Volterra \c{s}i Fredholm. Am calculat nucleele rezolvente ale ecua\c{t}iilor Volterra \c{s}i am gasit solu\c{t}iile corespunz\u{a}toare, am ar\u{a}tat c\u{a} alternativa lui Fredholm pentru ecua\c{t}ia corespunz\u{a}toare poate fi exprimat\u{a} ca o alternativ\u{a} echivalent\u{a} pentru  sistemul algebric.
+Cel de al treilea capitol prezint\u{a} aplica\c{t}ii pentru ecua\c{t}ii  Volterra \c{s}i Fredholm. Am calculat nucleele rezolvente ale ecua\c{t}iilor Volterra,  am g\u{a}sit solu\c{t}iile unor ecua\c{t}ii particulare prin reducerea lor la ecua\c{t}ii diferen\c{t}iale ordinare, am ar\u{a}tat c\u{a} alternativa lui Fredholm pentru o ecua\c{t}ie de tip Fredholm cu nucleu degenerat poate fi exprimat\u{a} ca o alternativ\u{a} echivalent\u{a} pentru un sistem algebric. Am rezolvat de asemenea \c{s}i dou\u{a} cazuri particulare de ecua\c{t}ii Fredholm abstracte.
 
 
 
@@ -681,13 +698,13 @@ Fie \(\Omega \subset \mathbb{R}^{k}\) o mul\c{t}ime nevid\u{a}. Avem \(\overline
 
 Fie \(\left ( X,d \right )\) \c{s}i \(\left ( X_{1},d_{1} \right )\) spa\c{t}iile metrice \c{s}i fie \(\varnothing \neq A\subset X\). Not\u{a}m cu \(C\left ( A;X_{1} \right )\), mul\c{t}imea tuturor func\c{t}iilor continue din \(A\subset \left ( X,d \right )\) la \(\left ( X_{1},d_{1} \right )\).
 \begin{definition}
-O familie de func\c{t}ii \(\mathcal{F} \subset C\left ( A;X_{1} \right )\) se nume\c{s}te echicontinu\u{a} dac\u{a} pentru orice \(\varepsilon > 0\) \c{s}i orice \(x \in A\) exist\u{a} \(\delta > 0\) astfel \^{i}nc\^{a}t \(y \in A\) \c{s}i \(d\left ( x,y \right )< \delta \) implic\u{a} \(d_{1}\left ( f\left ( x \right ),f\left ( y \right ) \right )< \varepsilon \) pentru orice \(f \in \mathcal{F} \), adic\u{a} \(\delta =\delta \left ( \varepsilon ,x \right )\) este independent\u{a} fa\c{t}\u{a} de \(f\). 
+O familie de func\c{t}ii \(\mathcal{F} \subset C\left ( A;X_{1} \right )\) se nume\c{s}te echicontinu\u{a} dac\u{a} pentru orice \(\varepsilon > 0\) \c{s}i orice \(x \in A\) exist\u{a} \(\delta > 0\) astfel \^{i}nc\^{a}t \(y \in A\) \c{s}i \(d\left ( x,y \right )< \delta \) implic\u{a} \(d_{1}\left ( f\left ( x \right ),f\left ( y \right ) \right )< \varepsilon \) pentru orice \(f \in \mathcal{F} \), adic\u{a} \(\delta =\delta \left ( \varepsilon ,x \right )\) este independent\u{a} fa\c{t}\u{a} de \(f\).
 \end{definition}
 \begin{definition}
-Dac\u{a}, \^{i}n plus, \(\delta =\delta \left ( \varepsilon  \right )\) ( adic\u{a} \(\delta\) este independent\u{a} fa\c{t}\u{a} de x \c{s}i f), atunci \(\mathcal{F}\) este uniform echicontinu\u{a}, adic\u{a} \(\forall \varepsilon > 0, \forall x,y \in A, d\left ( x,y \right )< \delta \) implic\u{a} \(d_{1}\left ( f\left ( x \right ), f\left ( y \right ) \right )< \varepsilon \), pentru orice \(f\in \mathcal{F}\). 
+Dac\u{a}, \^{i}n plus, \(\delta =\delta \left ( \varepsilon  \right )\) ( adic\u{a} \(\delta\) este independent\u{a} fa\c{t}\u{a} de x \c{s}i f), atunci \(\mathcal{F}\) este uniform echicontinu\u{a}, adic\u{a} \(\forall \varepsilon > 0, \forall x,y \in A, d\left ( x,y \right )< \delta \) implic\u{a} \(d_{1}\left ( f\left ( x \right ), f\left ( y \right ) \right )< \varepsilon \), pentru orice \(f\in \mathcal{F}\).
 \end{definition}
 \begin{theorem}
-Fie \(\varnothing \neq A\subset \left ( X,d \right )\) compact. Presupunem c\u{a} \(\mathcal{F} \subset C\left ( A,\mathbb{R}^{k} \right )\) este echicontinu\u{a} \c{s}i m\u{a}rginit\u{a} \^{i}n \(C\left ( A;\mathbb{R}^{k} \right )\), (adic\u{a} \(\exists M> 0\) astfel \^{i}nc\^{a}t \(\left \| f\left ( x \right ) \right \| \leq M, \forall x \in A, \forall f \in \mathcal{F}\) ) .Atunci \(\mathcal{F}\)este relativ compact\u{a} \^{i}n \(C\left ( A;\mathbb{R}^{k} \right )\) echipat\u{a} cu sup-norm\u{a}. 
+Fie \(\varnothing \neq A\subset \left ( X,d \right )\) compact. Presupunem c\u{a} \(\mathcal{F} \subset C\left ( A,\mathbb{R}^{k} \right )\) este echicontinu\u{a} \c{s}i m\u{a}rginit\u{a} \^{i}n \(C\left ( A;\mathbb{R}^{k} \right )\), (adic\u{a} \(\exists M> 0\) astfel \^{i}nc\^{a}t \(\left \| f\left ( x \right ) \right \| \leq M, \forall x \in A, \forall f \in \mathcal{F}\) ) .Atunci \(\mathcal{F}\)este relativ compact\u{a} \^{i}n \(C\left ( A;\mathbb{R}^{k} \right )\) echipat\u{a} cu sup-norm\u{a}.
 \end{theorem}
 
 \begin{definition} \textbf{Operatorul adjunct-Hilbert }
@@ -702,9 +719,9 @@ y^{\ast } = T^{\ast }y.
 Cu alte cuvinte , un element \(y\in H\) este \^{i}n \(\mathcal{D}\left ( T^{\ast } \right )\) dac\u{a} (\c{s}i numai dac\u{a}) pentru acel y produsul interior\(\left \langle Tx,y \right \rangle \), considerat ca o func\c{t}ie a lui x, poate fi reprezentat sub forma  \(\left \langle Tx,y \right \rangle = \left \langle x,y^{\ast } \right \rangle\) pentru orice \(v\). De asemenea pentru acel y, formula de mai susdetermin\u{a} corespondentul unic \(y^{\ast }\) din moment ce \(\mathcal{D}\left ( T \right )\) prin presupunerea noastr\u{a} , este dens\u{a} \^{i}n H.
 \end{definition}
 \begin{definition}\textbf{Operatorul liniar simetric }
-Fie \(T :  \mathcal{D}\left ( T \right ) \rightarrow H\) un operator liniar care este dens definit \^{i}ntr-un spa\c{t}iu Hilbert H complex . Atunci T se nume\c{s}te un operator liniar simetric dac\u{a} pentru orice \(x,y\in \mathcal{D}\left ( T \right )\), 
+Fie \(T :  \mathcal{D}\left ( T \right ) \rightarrow H\) un operator liniar care este dens definit \^{i}ntr-un spa\c{t}iu Hilbert H complex . Atunci T se nume\c{s}te un operator liniar simetric dac\u{a} pentru orice \(x,y\in \mathcal{D}\left ( T \right )\),
 \begin{displaymath}
-\left \langle Tx,y \right \rangle = \left \langle x,Ty \right \rangle. 
+\left \langle Tx,y \right \rangle = \left \langle x,Ty \right \rangle.
 \end{displaymath}
 \end{definition}
 \begin{definition}\textbf{Operatorul liniar autoadjunct}
@@ -712,9 +729,9 @@ Fie \(T :  \mathcal{D}\left ( T \right ) \rightarrow H \) un operator liniar car
 \begin{displaymath}
 T = T^{\ast }
 \end{displaymath}
-Orice operator liniar autoadjunct este simetric. 
+Orice operator liniar autoadjunct este simetric.
 
-\noindent Pentru un operator \(T : H \rightarrow H\) pe un spa\c{t}iu Hilbert H complex, conceptele de simetric \c{s}i autoadjunct sunt identice. 
+\noindent Pentru un operator \(T : H \rightarrow H\) pe un spa\c{t}iu Hilbert H complex, conceptele de simetric \c{s}i autoadjunct sunt identice.
 \end{definition}
 
 
@@ -1803,7 +1820,7 @@ Prin urmare dac\u{a} \(\lambda = \frac{1}{2\pi}\) ecua\c{t}ia integral\u{a} dat\
         \begin{displaymath}
         	c_{1} = \int_{0}^{t} x\left ( s \right ) \ ds,~c_{2} = \int_{0}^{t} sx\left ( s \right ) \ ds.
         \end{displaymath}
-Astfel ob\c{t}inem sistemul 
+Astfel ob\c{t}inem sistemul
         \begin{displaymath}
         	\left\{\begin{matrix}
         	c_{1} = \int_{0}^{1} \left [ f\left ( s \right ) + \lambda c_{1} - 3\lambda c_{2}s \right ]\ ds,\\
@@ -1994,7 +2011,7 @@ deoarece sistemul \(\left \{ u_{n} \right \}_{n=0}^{\infty }\) este o baz\u{a} \
 \begin{displaymath}
   \sum_{n = 0}^{\infty }\frac{\left ( g, u_{n} \right )_{L^{2}}}{\left ( n+1 \right )^{2}}u_{n} = \mu \sum_{n = 0}^{\infty }\left ( g, u_{n} \right )_{L^{2}}u_{n},
 \end{displaymath}
-unde am folosit dezvoltarea \^{i}n serie Fourier a lui \(g\). 
+unde am folosit dezvoltarea \^{i}n serie Fourier a lui \(g\).
 
 Deoarece \(\left \{ u_{n} \right \}_{n = 0}^{\infty }\) este o baz\u{a} \^{i}n \(H\) , avem
 \begin{displaymath}
@@ -2004,7 +2021,7 @@ Dac\u{a} \(\mu \neq \frac{1}{\left ( n+1 \right )^{2}}\) pentru orice \(n\in \le
 \begin{displaymath}
   \left ( g,u_{n} \right )_{L^{2}} = 0, \forall n\in \left \{ 0,1,2,\cdots \right \}\Rightarrow g = 0,
 \end{displaymath}
-prin urmare, astfel de  \(\mu\)  -uri nu sunt valori proprii ale lui \(A\). 
+prin urmare, astfel de  \(\mu\)  -uri nu sunt valori proprii ale lui \(A\).
 
 Pentru \(\mu   = \mu _{n} = \frac{1}{\left ( n+1 \right )^{2}}\) avem din \ref{eq:*}
 \begin{displaymath}
@@ -2063,26 +2080,26 @@ Pe baza argumentelor de mai sus, avem
 
 \end{proof}
 \chapter* {Concluzii}
-\^{I}n cadrul acestei lucr\u{a}ri au fost prezentate ecua\c{t}iile integrale Volterra si fredholm. 
+\^{I}n cadrul acestei lucr\u{a}ri au fost prezentate rezultate privind ecua\c{t}iile integrale de tip Volterra \c{s}i Fredholm.
 
-Primul capitol a cuprins defini\c{t}ii \c{s}i teoreme pe care, le-am folosit \^{i}n cadrul lucr\u{a}rii. Printre acestea reg\u{a}sim, Teorema de existen\c{t}\u{a} a lui Peano, Principiul contrac\c{t}iilor Banach , care este o abstractizare a metodei aproxima\c{t}iilor succesive, metod\u{a} utilizat\u{a} \^{i}n mod empiric \^{i}nc\u{a} din antichitate pentru rezolvarea ecua\c{t}iilor numerice. Teorema lui Fredholm, care ne spune c\u{a}, dac\u{a} avem un spa\c{t}iu Hilbert \(\left ( H, \left ( \cdot ,\cdot  \right ), \left \| \cdot  \right \| \right )\)  \c{s}i  \(A \in K\left ( H \right ),\) ecua\c{t}ia \(x - A^{\ast }x = f\) are solu\c{t}ie dac\u{a} \c{s}i numai dac\u{a} \(f \in { \mathcal{N}} ^{\perp }\) unde \({ \mathcal{N}} = N\left ( I - A \right ). \)  De asemenea am abordat teorema Hilbert-Schmidt \c{s}i Criteriul Arzelà-Ascoli.
+Primul capitol a cuprins defini\c{t}ii \c{s}i teoreme pe care  le-am folosit \^{i}n cadrul lucr\u{a}rii. Printre acestea reg\u{a}sim, Teorema de existen\c{t}\u{a} a lui Peano, Principiul contrac\c{t}iilor al uli Banach care este de fapt o abstractizare a metodei aproxima\c{t}iilor succesive, metod\u{a} utilizat\u{a} \^{i}n mod empiric \^{i}nc\u{a} din antichitate pentru rezolvarea ecua\c{t}iilor numerice, Teorema lui Fredholm, care ne spune c\u{a}, dac\u{a} avem un spa\c{t}iu Hilbert \(\left ( H, \left ( \cdot ,\cdot  \right ), \left \| \cdot  \right \| \right )\)  \c{s}i  \(A \in K\left ( H \right ),\) ecua\c{t}ia \(x - A^{\ast }x = f\) are solu\c{t}ie dac\u{a} \c{s}i numai dac\u{a} \(f \in { \mathcal{N}} ^{\perp }\) unde \({ \mathcal{N}} = N\left ( I - A \right ).\)  De asemenea am abordat teorema Hilbert-Schmidt \c{s}i Criteriul Arzelà-Ascoli.
 
-Cel de al doilea capitol, cuprinde o prezentare a ecua\c{t}iilor integrale  Volterra , de primul \c{s}i de al doilea tip, \c{s}i anume:
+Cel de al doilea capitol, cuprinde o prezentare a ecua\c{t}iilor integrale  Volterra, de prima \c{s}i de a doilea tip, mai exact:
 \begin{displaymath}
-f\left ( t \right ) = \int_{a}^{t}k\left ( t,s \right )x\left ( s \right )ds,    a\leq t\leq b  
+f\left ( t \right ) = \int_{a}^{t}k\left ( t,s \right )x\left ( s \right )ds,    a\leq t\leq b
 \end{displaymath}
 \c{s}i
 \begin{displaymath}
-x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x\left ( s \right )ds, a\leq t\leq b, 
+x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{t}k\left ( t,s \right )x\left ( s \right )ds, a\leq t\leq b,
 \end{displaymath}
 unde \[a,b \in \mathbb{R}, a< b, f\in C\left [ a,b \right ]:= C\left ( \left [ a,b \right ];\mathbb{R} \right ), k\in C\left (\Delta   \right ):= C\left ( \Delta ;\mathbb{R} \right )\] (numit nucleu), cu \(\Delta =\left \{ \left ( t,s \right )\in \mathbb{R}^{2};a\leq s\leq t\leq b \right \};\) \(x=x\left ( t \right )\) reprezint\u{a} func\c{t}ia necunoscut\u{a} care apar\c{t}ine spa\c{t}iul \(C\left [ a,b \right ]\)
 si ecua\c{t}iile integrale  Fredholm
 \begin{displaymath}
-x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )ds, t\in \left [ a,b \right ], 
+x\left ( t \right ) = f\left ( t \right ) + \int_{a}^{b}k\left ( t,s \right )x\left ( s \right )ds, t\in \left [ a,b \right ],
 \end{displaymath}
 unde \(a,b \in \mathbb{R}, a< b, f\in C\left ( \left [ a,b \right ]; \mathbb{K}\right )\) \c{s}i \(k\in C\left ( \left [ a,b \right ] \times \left [ a,b \right ]; \mathbb{K}\right ).\)
 
-Cel de al patrulea capitol, a cuprins ecua\c{t}ii Volterra \c{s}i Fredholm, dar \c{s}i probleme Cauchy. 
+Cel de al treilea capitol  a cuprins o serie de aplica\c{t}ii  pentru ecua\c{t}iile Volterra \c{s}i Fredholm studiate \^{i}n capitolul anterior.
 
 
 \bibliographystyle{unsrt}
